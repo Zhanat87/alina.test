@@ -1,0 +1,13 @@
+backend/web/assets/*
+!backend/web/assets/.gitignore
+frontend/runtime/*
+!frontend/runtime/.gitignore
+console/runtime/*
+!console/runtime/.gitignore
+.idea/*
+vendor/*
+composer.lock
+log/*
+alina.test.zip
+alina.test2.zip
+tz.txt

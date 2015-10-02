@@ -1,0 +1,12 @@
+.contractorDiv {
+    margin: 10px 0px 20px 0px;
+}
+.wizard .wizard-inner .actions {
+    z-index: 100;
+}
+.contractorDiv ul.steps {
+    z-index: 101;
+}
+ul.steps li {
+    cursor: pointer !important;
+}

@@ -1,0 +1,8 @@
+.onoffswitch-inner:before {
+    content: "Да";
+}
+.onoffswitch-inner:after {
+    content: "Нет";
+    background-color: #e74c3c;
+    color: #fff;
+}

@@ -1,0 +1,12 @@
+#loginform-rememberme {
+    position: relative;
+    top: 2px;
+    width: 10px;
+}
+#login-full-wrapper {
+    background: url("../../images/Golden-fox-in-the-winter-snow_1440x900.jpg") no-repeat
+        scroll center center / cover rgba(0, 0, 0, 0);
+}
+#login-logo h4 {
+    text-transform: none;
+}

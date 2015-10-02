@@ -1,0 +1,59 @@
+/* begin grid-view */
+.grid-view input[type=checkbox] {
+    cursor: pointer;
+}
+.grid-view {
+    overflow: auto;
+    width: 100%;
+}
+.grid-view .sort-link{
+    display:block;
+    padding-right:25px;
+}
+/*.grid-view .asc:after{*/
+    /*content: url(../../images/sort_asc.png);*/
+    /*position: relative;*/
+    /*top: 8px;*/
+/*}*/
+/*.grid-view .desc:after{*/
+    /*content: url(../../images/sort_desc.png);*/
+    /*position: relative;*/
+    /*top: 2px;*/
+/*}*/
+/* end grid-view */
+/* begin action link */
+.table a.table-link.danger:hover {
+    color: #E71C16;
+}
+.table a.table-link.success {
+    color: #2ECC71;
+}
+.table a.table-link.success:hover {
+    color: #0CCC12;
+}
+.table a.table-link.warning {
+    color: #F1C40F;
+}
+.table a.table-link.warning:hover {
+    color: #F1A60C;
+}
+/* end action link */
+.notTextDecorationA:hover {
+    text-decoration: none;
+}
+.table a.table-link {
+    margin: 0px !important;
+    font-size: 12px;
+}
+.table a.table-link.danger {
+    position: relative;
+    right: 5px;
+}
+.table a.table-link.warning {
+    position: relative;
+    right: 10px;
+}
+.table a.table-link.success {
+    position: relative;
+    right: 10px;
+}

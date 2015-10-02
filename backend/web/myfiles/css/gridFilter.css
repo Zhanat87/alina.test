@@ -1,0 +1,18 @@
+.gridFilterDiv {
+    text-align: right;
+}
+.gridFilterSave {
+    margin-top: 5px;
+}
+.errorInput {
+    border-color: #e74c3c;
+}
+.filterDiv {
+    margin: 10px 15px 0 0;
+}
+.deleteGridFilter, p.error {
+    color: #e74c3c !important;
+}
+.deleteGridFilter:hover {
+    color: #c0392b !important;;
+}
