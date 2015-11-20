@@ -66,7 +66,7 @@ class m130524_201442_init extends Migration
 
             'status'               => $this->smallInteger()->notNull(),
             'created_at'           => $this->dateTime()->notNull(),
-            'updated_at'           => $this->dateTime()->notNull(),
+            'updated_at'           => $this->dateTime(),
         ], $tableOptions);
         $this->addForeignKey('roleUserFk', '{{%user}}', 'role', $this->getAuthManager()->itemTable, 'name');
 
@@ -77,6 +77,7 @@ class m130524_201442_init extends Migration
                 Yii::$app->getSecurity()->generatePasswordHash('testtest'),
                 Access::ADMIN,
                 'admin@admin.com',
+                date('Y-m-d H:i:s'),
             ],
             [
                 Access::USER,
@@ -84,9 +85,10 @@ class m130524_201442_init extends Migration
                 Yii::$app->getSecurity()->generatePasswordHash('testtest'),
                 Access::USER,
                 'user@user.com',
+                date('Y-m-d H:i:s'),
             ],
         ];
-        $this->batchInsert('{{%user}}', ['username', 'auth_key', 'password_hash', 'role', 'email'], $rows);
+        $this->batchInsert('{{%user}}', ['username', 'auth_key', 'password_hash', 'role', 'email', 'created_at'], $rows);
 
         $this->getAuthManager()->assign($this->getAuthManager()->getRole(Access::ADMIN), 1);
     }
