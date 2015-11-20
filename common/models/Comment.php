@@ -4,6 +4,7 @@ namespace common\models;
 
 use Yii;
 use backend\modules\news\models\News;
+use common\my\yii2\ActiveRecord;
 
 /**
  * This is the model class for table "comment".
@@ -15,7 +16,7 @@ use backend\modules\news\models\News;
  *
  * @property News $news
  */
-class Comment extends \common\my\yii2\ActiveRecord
+class Comment extends ActiveRecord
 {
 
     /**
@@ -47,8 +48,8 @@ class Comment extends \common\my\yii2\ActiveRecord
         return [
             'id' => 'ID',
             'email' => 'Email',
-            'text' => 'Text',
-            'news_id' => 'News ID',
+            'text' => 'Текст',
+            'news_id' => 'ID новости',
         ];
     }
 
