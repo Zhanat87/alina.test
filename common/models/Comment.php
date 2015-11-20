@@ -5,6 +5,7 @@ namespace common\models;
 use Yii;
 use backend\modules\news\models\News;
 use common\my\yii2\ActiveRecord;
+use yii\helpers\HtmlPurifier;
 
 /**
  * This is the model class for table "comment".
@@ -37,6 +38,9 @@ class Comment extends ActiveRecord
             [['news_id'], 'integer'],
             [['email', 'text'], 'string', 'max' => 255],
             ['email', 'email'],
+            [['email', 'text'], 'filter', 'filter' => function($value) {
+                return HtmlPurifier::process(trim($value));
+            }],
         ];
     }
 

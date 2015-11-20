@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use common\models\Comment;
+use common\my\vendor\ReCaptcha;
 use Yii;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
@@ -10,12 +11,13 @@ use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
-use yii\web\Controller;
+use common\my\yii2\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use backend\modules\news\models\News;
 use backend\modules\news\models\search\NewsSearch;
 use yii\web\NotFoundHttpException;
+use yii\web\Response;
 use yii\widgets\ActiveForm;
 
 /**
@@ -96,17 +98,37 @@ class SiteController extends Controller
         if (!$news) {
             throw new NotFoundHttpException('нет такой новости');
         }
-        $comment = new Comment();
-        if (Yii::$app->request->isPost) {
-            $comment->load(Yii::$app->request->post());
-            if ($comment->save()) {
-                $comment = new Comment();
-            }
-        }
         return $this->render('news', [
             'news' => $news,
-            'comment' => $comment,
+            'comment' => new Comment(),
         ]);
+    }
+
+    public function actionNewComment()
+    {
+        if ($this->isAjax()) {
+            $model = new Comment();
+            $model->load($this->getParams());
+            $validate = $model->validate();
+            $reCaptcha = new ReCaptcha();
+            $response = $reCaptcha->check();
+            if ($validate && $response->isValid() && $model->save(false)) {
+                return $this->getSuccessResponse([
+                    'email' => $model->email,
+                    'text' => $model->text,
+                ]);
+            } else {
+                $res = [];
+                if (!$validate) {
+                    $res['modelErrors'] = ActiveForm::validate($model);
+                }
+                if (!$response->isValid()) {
+                    $res['reCaptchaError'] = true;
+                }
+                return $res;
+            }
+        }
+        return Yii::$app->params['response']['error'];
     }
 
     /**
