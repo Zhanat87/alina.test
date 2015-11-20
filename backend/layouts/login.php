@@ -40,7 +40,7 @@ IE9Asset::register($this);
                                 <header id="login-header">
                                     <div id="login-logo">
                                         <h4>
-                                            Веб ЛИС
+                                            Имя приложения
                                         </h4>
                                     </div>
                                 </header>

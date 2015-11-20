@@ -35,10 +35,10 @@ class News extends ActiveRecord
     public function rules()
     {
         return [
-            [['text'], 'required'],
+            [['title', 'text'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
             [['status'], 'integer'],
-            [['title', 'text'], 'string', 'max' => 255],
+            [['title'], 'string', 'max' => 255],
         ];
     }
 
@@ -55,16 +55,6 @@ class News extends ActiveRecord
             'updated_at' => 'Дата редактирования',
             'status' => 'Опубликован',
         ];
-    }
-
-    public static function getAllForLists()
-    {
-        return self::getCachedKeyValueData(
-            self::tableName(),
-            ['id', 'text'],
-            ['status' => 1],
-            'getAllForLists'
-        );
     }
 
     /**

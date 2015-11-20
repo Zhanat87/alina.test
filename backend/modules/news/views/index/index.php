@@ -54,7 +54,6 @@ GridViewConstAsset::register($this);
                                 ],
                             ],
                             'title',
-                            'text',
                             [
                                 'attribute'     => 'created_at',
                                 'filterOptions' => [

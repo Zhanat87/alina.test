@@ -5,9 +5,7 @@ namespace backend\modules\user\controllers;
 use Yii;
 use yii\filters\VerbFilter;
 use backend\modules\rbac\models\AuthItem;
-use backend\modules\subdivision\models\Subdivision;
 use yii\helpers\ArrayHelper;
-use backend\modules\result\models\Department;
 
 /**
  * Class DenyController
@@ -46,11 +44,7 @@ class DenyController extends UserController
         return $this->render('@app/modules/user/views/user/view', [
             'model' => $model,
             'statuses' => $model->getStatuses(),
-            'subdivisions' => Subdivision::getAllForLists(),
             'roles' => AuthItem::getRoles(),
-            'departments' => Department::getAllForLists(),
-            'applications' => $model->getApplications(),
-            'answers' => Yii::$app->current->getAnswers(),
         ]);
     }
 
@@ -62,12 +56,8 @@ class DenyController extends UserController
         } else {
             return $this->render('@app/modules/user/views/user/update2', [
                 'model' => $model,
-                'subdivisions' => Subdivision::getAllForLists(),
                 'statuses' => $model->getStatuses(),
                 'roles' => AuthItem::getRoles(),
-                'departments' => Department::getAllForLists(),
-                'applications' => $model->getApplications(),
-                'answers' => Yii::$app->current->getAnswers(),
             ]);
         }
     }

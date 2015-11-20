@@ -15,7 +15,7 @@ use backend\widgets\OnOffSwitch;
     ]); ?>
     <div class="row">
         <div class="col-md-4">
-            <?= $form->field($model, 'title')->textInput(['maxlength' => 255]) ?>
+            <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
         </div>
     </div>
     <div class="row">
