@@ -415,3 +415,11 @@ li.dropdown.active, .headerMenu li.active {
 .alertDiv {
     margin: 50px;
 }
+.previewDiv {
+    height: 48px;
+    width: 48px;
+    border-radius: 48px;
+    border: 2px solid #fff;
+    overflow: hidden;
+    float: left;
+}

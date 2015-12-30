@@ -77,6 +77,13 @@ class Menu
             'visible' => $this->appAccess->isUser(true),
             'url'     => Url::to('/news/index/index'),
         ];
+        $data[] = [
+            'label'   => 'Книги',
+            'icon'    => 'fa fa-book',
+            'active'  => $this->module == 'book',
+            'visible' => $this->appAccess->isUser(true),
+            'url'     => Url::to('/book/index/index'),
+        ];
         return $data;
     }
 
@@ -128,6 +135,15 @@ class Menu
                 'active'  => $this->module == 'news',
                 'visible' => $this->appAccess->isUser(true),
                 'url'     => Url::to('/news/index/index'),
+            ];
+        }
+        if ($this->module == 'book') {
+            $data[] = [
+                'label'   => 'Книги',
+                'icon'    => 'fa fa-book',
+                'active'  => $this->module == 'book',
+                'visible' => $this->appAccess->isUser(true),
+                'url'     => Url::to('/book/index/index'),
             ];
         }
         return $data;

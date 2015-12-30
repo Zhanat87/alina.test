@@ -47,7 +47,10 @@ function mdFormSend()
         $.ajax({
             url: form.attr('action'),
             type: 'post',
-            data: form.serialize(),
+            data: new FormData(document.getElementById(form.attr('id'))), // form.serialize()
+            contentType: false,
+            cache: false,
+            processData:false,
             success: function(response) {
                 if (response.status == 'ok') {
                     $this.next().click();

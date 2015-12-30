@@ -18,16 +18,20 @@ trait CachedKeyValueData
         $where,
         $key,
         $defaultValue = [],
-        $isAssoc = true
+        $isAssoc = true,
+        $orderBy = null
     )
     {
         if (($data = Yii::$app->cache->get($table . $key)) === false) {
             $data = $defaultValue;
-            $rows = (new Query)
+            $query = (new Query)
                 ->select($columns)
                 ->from($table)
-                ->where($where)
-                ->all();
+                ->where($where);
+            if ($orderBy) {
+                $query = $query->orderBy($orderBy);
+            }
+            $rows = $query->all();
             if ($rows) {
                 $columnsCount = count($columns);
                 foreach ($rows as $row) {
@@ -56,7 +60,7 @@ trait CachedKeyValueData
                     $data[$row[$columns[0]]] = $v;
                 }
             }
-            Yii::$app->cache->set($table . $key, $data, 86400);
+            Yii::$app->cache->set($table . $key, $data, Yii::$app->params['duration']['day']);
         }
         return $data;
     }

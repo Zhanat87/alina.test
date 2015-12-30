@@ -18,6 +18,17 @@ class ActiveRecord extends YiiActiveRecord
 
     use CachedKeyValueData;
 
+    const STATUS_NOT_ACTIVE = 0;
+    const STATUS_ACTIVE = 1;
+
+    const GET_ALL_FOR_LISTS = 'getAllForLists';
+    const GET_ALL_FOR_LISTS2 = 'getAllForLists2';
+
+    const DATE_KEY = 'date';
+    const DATE_TIME_KEY = 'dateTime';
+
+    protected $dateTimeFields;
+
     /**
      * @return array
      */
@@ -51,11 +62,11 @@ class ActiveRecord extends YiiActiveRecord
     protected function deleteCache()
     {
         $tableName = trim(self::tableName(), '{%}');
-        if ($this->hasMethod('getAllForLists')) {
-            Yii::$app->cache->delete($tableName . 'getAllForLists');
+        if ($this->hasMethod(self::GET_ALL_FOR_LISTS)) {
+            Yii::$app->cache->delete($tableName . self::GET_ALL_FOR_LISTS);
         }
-        if ($this->hasMethod('getAllForLists2')) {
-            Yii::$app->cache->delete($tableName . 'getAllForLists2');
+        if ($this->hasMethod(self::GET_ALL_FOR_LISTS2)) {
+            Yii::$app->cache->delete($tableName . self::GET_ALL_FOR_LISTS2);
         }
         return true;
     }
@@ -70,6 +81,14 @@ class ActiveRecord extends YiiActiveRecord
             $this->deleteCache();
             if ($this->isTimestampBehavior() && !$this->isNewRecord) {
                 $this->created_at = Yii::$app->current->setDateTimeForDb($this->created_at);
+            }
+            if ($this->getDateTimeFields()) {
+                foreach ($this->getDateTimeFields() as $k => $v) {
+                    foreach ($v as $date) {
+                        $this->$date =
+                            Yii::$app->current->setDateTimeForDb($this->$date, $k == self::DATE_KEY ? false : true);
+                    }
+                }
             }
             return true;
         } else {
@@ -99,6 +118,14 @@ class ActiveRecord extends YiiActiveRecord
             $this->created_at = Yii::$app->current->getDateTimeFromDb($this->created_at);
             $this->updated_at = Yii::$app->current->getDateTimeFromDb($this->updated_at);
         }
+        if ($this->getDateTimeFields()) {
+            foreach ($this->getDateTimeFields() as $k => $v) {
+                foreach ($v as $date) {
+                    $this->$date =
+                        Yii::$app->current->getDateTimeFromDb($this->$date, $k == self::DATE_KEY ? false : true);
+                }
+            }
+        }
         return parent::afterFind();
     }
 
@@ -109,6 +136,14 @@ class ActiveRecord extends YiiActiveRecord
     public function clearText($v)
     {
         return HtmlPurifier::process(trim($v));
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDateTimeFields()
+    {
+        return $this->dateTimeFields;
     }
 
 } 

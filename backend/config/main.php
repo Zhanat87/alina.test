@@ -25,6 +25,9 @@ return [
         'news'          => [
             'class' => 'backend\modules\news\News',
         ],
+        'book'          => [
+            'class' => 'backend\modules\book\Book',
+        ],
     ],
     'components'          => [
         'user'         => [

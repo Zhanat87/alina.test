@@ -37,4 +37,6 @@ return [
             'status' => 'empty',
         ],
     ],
+    'domainName' => 'http://alina.test/',
+    'backendDomainName' => 'http://backend.alina.test/',
 ];
