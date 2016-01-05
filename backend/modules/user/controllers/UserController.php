@@ -5,52 +5,24 @@ namespace backend\modules\user\controllers;
 use Yii;
 use backend\modules\user\models\User;
 use backend\modules\user\models\search\UserSearch;
-use backend\my\yii2\Controller;
-use yii\web\NotFoundHttpException;
-use backend\my\actions\RemoveAction;
-use backend\my\actions\DeleteAction;
-use backend\my\actions\RestoreAction;
-use yii\filters\VerbFilter;
+use backend\my\yii2\CrudController;
 use yii\widgets\ActiveForm;
 use backend\modules\rbac\models\AuthItem;
-use yii\helpers\ArrayHelper;
+use yii\web\Response;
 
 /**
  * UserController implements the CRUD actions for User model.
  */
-class UserController extends Controller
+class UserController extends CrudController
 {
 
-    public function actions()
+    /**
+     * @return bool|void
+     */
+    public function init()
     {
-        return [
-            'remove' => [
-                'class' => RemoveAction::className(),
-                'modelClass' => User::className(),
-            ],
-            'delete' => [
-                'class' => DeleteAction::className(),
-                'modelClass' => User::className(),
-            ],
-            'restore' => [
-                'class' => RestoreAction::className(),
-                'modelClass' => User::className(),
-            ],
-        ];
-    }
-
-    public function behaviors()
-    {
-        return ArrayHelper::merge(parent::behaviors(), [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'remove' => ['post'],
-                    'delete' => ['post'],
-                    'restore' => ['post'],
-                ],
-            ],
-        ]);
+        parent::init();
+        $this->modelClass = User::className();
     }
 
     /**
@@ -92,10 +64,10 @@ class UserController extends Controller
     public function actionCreate()
     {
         $model = new User();
-        $model->setScenario('create');
+        $model->setScenario($model::SCENARIO_CREATE);
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-            Yii::$app->response->format = 'json';
+            Yii::$app->response->format = Response::FORMAT_JSON;
             if($model->save()) {
                 return Yii::$app->params['response']['success'];
             } else {
@@ -119,7 +91,7 @@ class UserController extends Controller
         $model = $this->findModel($id);
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-            Yii::$app->response->format = 'json';
+            Yii::$app->response->format = Response::FORMAT_JSON;
             if($model->save()) {
                 return Yii::$app->params['response']['success'];
             } else {
@@ -130,22 +102,6 @@ class UserController extends Controller
                 'model' => $model,
                 'roles' => AuthItem::getRoles(),
             ]);
-        }
-    }
-
-    /**
-     * Finds the User model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return User the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    protected function findModel($id)
-    {
-        if (($model = User::findOne($id)) !== null) {
-            return $model;
-        } else {
-            throw new NotFoundHttpException('Запрашиваемая страница не существует.');
         }
     }
 

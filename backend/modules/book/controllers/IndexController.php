@@ -6,53 +6,24 @@ use Yii;
 use backend\modules\book\models\Book;
 use backend\modules\book\models\Author;
 use backend\modules\book\models\search\BookSearch;
-use backend\my\yii2\Controller;
-use yii\web\NotFoundHttpException;
-use backend\my\actions\RemoveAction;
-use backend\my\actions\DeleteAction;
-use backend\my\actions\RestoreAction;
-use yii\filters\VerbFilter;
+use backend\my\yii2\CrudController;
 use yii\widgets\ActiveForm;
-use yii\helpers\ArrayHelper;
 use yii\web\Response;
 use backend\modules\book\services\ImageRemove;
 
 /**
  * IndexController implements the CRUD actions for Book model.
  */
-class IndexController extends Controller
+class IndexController extends CrudController
 {
 
-    public function actions()
+    /**
+     * @return bool|void
+     */
+    public function init()
     {
-        return [
-            'remove' => [
-                'class' => RemoveAction::className(),
-                'modelClass' => Book::className(),
-            ],
-            'delete' => [
-                'class' => DeleteAction::className(),
-                'modelClass' => Book::className(),
-            ],
-            'restore' => [
-                'class' => RestoreAction::className(),
-                'modelClass' => Book::className(),
-            ],
-        ];
-    }
-
-    public function behaviors()
-    {
-        return ArrayHelper::merge(parent::behaviors(), [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'remove' => ['post'],
-                    'delete' => ['post'],
-                    'restore' => ['post'],
-                ],
-            ],
-        ]);
+        parent::init();
+        $this->modelClass = Book::className();
     }
 
     /**
@@ -118,22 +89,6 @@ class IndexController extends Controller
                 'statuses' => Yii::$app->current->getStatuses(),
                 'authors' => Author::getAllForLists(),
             ]);
-        }
-    }
-
-    /**
-     * Finds the Book model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Book the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    protected function findModel($id)
-    {
-        if (($model = Book::findOne($id)) !== null) {
-            return $model;
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
 
