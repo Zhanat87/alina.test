@@ -27,6 +27,9 @@ class ActiveRecord extends YiiActiveRecord
     const DATE_KEY = 'date';
     const DATE_TIME_KEY = 'dateTime';
 
+    const SCENARIO_CREATE = 'create';
+    const SCENARIO_UPDATE = 'update';
+
     protected $dateTimeFields;
 
     /**
