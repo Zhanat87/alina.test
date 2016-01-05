@@ -5,29 +5,23 @@ namespace backend\modules\rbac\controllers;
 use Yii;
 use backend\modules\rbac\models\AuthRule;
 use backend\modules\rbac\models\search\AuthRuleSearch;
-use backend\my\yii2\Controller;
+use backend\my\yii2\AjaxCrudController;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 use yii\widgets\ActiveForm;
-use yii\helpers\ArrayHelper;
 
 /**
  * AuthRuleController implements the CRUD actions for AuthRule model.
  */
-class AuthRuleController extends Controller
+class AuthRuleController extends AjaxCrudController
 {
 
-    public function behaviors()
+    /**
+     * @return bool|void
+     */
+    public function init()
     {
-        return ArrayHelper::merge(parent::behaviors(), [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'remove' => ['post'],
-                    'delete' => ['post'],
-                ],
-            ],
-        ]);
+        parent::init();
+        $this->modelClass = AuthRule::className();
     }
 
     /**
@@ -54,7 +48,6 @@ class AuthRuleController extends Controller
         $model = new AuthRule;
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-            Yii::$app->response->format = 'json';
             if($model->save()) {
                 return Yii::$app->params['response']['success'];
             } else {
@@ -77,7 +70,6 @@ class AuthRuleController extends Controller
         $model = $this->findModel($name);
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-            Yii::$app->response->format = 'json';
             if($model->save()) {
                 return Yii::$app->params['response']['success'];
             } else {
@@ -88,33 +80,6 @@ class AuthRuleController extends Controller
                 'model' => $model,
             ]);
         }
-    }
-
-    /**
-     * Deletes an existing AuthRule model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param string $name
-     * @return mixed
-     */
-    public function actionDelete($name)
-    {
-        $this->findModel($name)->delete();
-
-        return $this->redirect(['index']);
-    }
-
-    /**
-     * Removes an existing AuthRule model.
-     * @param string $name
-     * @return mixed
-     */
-    public function actionRemove($name)
-    {
-        Yii::$app->response->format = 'json';
-        if ($this->findModel($name)->delete()) {
-            return Yii::$app->params['ajaxOk'];
-        }
-        return Yii::$app->params['ajaxError'];
     }
 
     /**

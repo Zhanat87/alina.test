@@ -6,15 +6,14 @@ use Yii;
 use backend\modules\book\models\Book;
 use backend\modules\book\models\Author;
 use backend\modules\book\models\search\BookSearch;
-use backend\my\yii2\CrudController;
+use backend\my\yii2\AjaxCrudController;
 use yii\widgets\ActiveForm;
-use yii\web\Response;
 use backend\modules\book\services\ImageRemove;
 
 /**
  * IndexController implements the CRUD actions for Book model.
  */
-class IndexController extends CrudController
+class IndexController extends AjaxCrudController
 {
 
     /**
@@ -51,7 +50,6 @@ class IndexController extends CrudController
     {
         $model = new Book;
         if (Yii::$app->request->isPost) {
-            Yii::$app->response->format = Response::FORMAT_JSON;
             $model->load(Yii::$app->request->post());
             if($model->save()) {
                 return Yii::$app->params['response']['success'];
@@ -77,7 +75,6 @@ class IndexController extends CrudController
         $model = $this->findModel($id);
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-            Yii::$app->response->format = Response::FORMAT_JSON;
             if($model->save()) {
                 return Yii::$app->params['response']['success'];
             } else {

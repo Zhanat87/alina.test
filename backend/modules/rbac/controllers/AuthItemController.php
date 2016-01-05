@@ -5,30 +5,24 @@ namespace backend\modules\rbac\controllers;
 use Yii;
 use backend\modules\rbac\models\AuthItem;
 use backend\modules\rbac\models\search\AuthItemSearch;
-use backend\my\yii2\Controller;
+use backend\my\yii2\AjaxCrudController;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 use backend\modules\rbac\models\AuthRule;
 use yii\widgets\ActiveForm;
-use yii\helpers\ArrayHelper;
 
 /**
  * AuthItemController implements the CRUD actions for AuthItem model.
  */
-class AuthItemController extends Controller
+class AuthItemController extends AjaxCrudController
 {
 
-    public function behaviors()
+    /**
+     * @return bool|void
+     */
+    public function init()
     {
-        return ArrayHelper::merge(parent::behaviors(), [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'remove' => ['post'],
-                    'delete' => ['post'],
-                ],
-            ],
-        ]);
+        parent::init();
+        $this->modelClass = AuthItem::className();
     }
 
     /**
@@ -54,7 +48,6 @@ class AuthItemController extends Controller
         $model = new AuthItem;
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-            Yii::$app->response->format = 'json';
             if($model->save()) {
                 return Yii::$app->params['response']['success'];
             } else {
@@ -79,7 +72,6 @@ class AuthItemController extends Controller
         $model = $this->findModel($name);
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-            Yii::$app->response->format = 'json';
             if($model->save()) {
                 return Yii::$app->params['response']['success'];
             } else {
@@ -92,33 +84,6 @@ class AuthItemController extends Controller
                 'types' => $model->getTypes(),
             ]);
         }
-    }
-
-    /**
-     * Deletes an existing AuthItem model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param string $name
-     * @return mixed
-     */
-    public function actionDelete($name)
-    {
-        $this->findModel($name)->delete();
-
-        return $this->redirect(['index']);
-    }
-
-    /**
-     * Removes an existing AuthItem model.
-     * @param string $name
-     * @return mixed
-     */
-    public function actionRemove($name)
-    {
-        Yii::$app->response->format = 'json';
-        if ($this->findModel($name)->delete()) {
-            return Yii::$app->params['ajaxOk'];
-        }
-        return Yii::$app->params['ajaxError'];
     }
 
     /**

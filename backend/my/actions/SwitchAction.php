@@ -5,7 +5,6 @@ namespace backend\my\actions;
 use Yii;
 use yii\base\Action;
 use yii\web\NotFoundHttpException;
-use yii\web\Response;
 use yii\web\BadRequestHttpException;
 use common\my\yii2\ActiveRecord;
 
@@ -33,9 +32,7 @@ class SwitchAction extends Action
      */
     public function init()
     {
-        if (Yii::$app->request->isAjax && Yii::$app->request->isPost) {
-            Yii::$app->response->format = Response::FORMAT_JSON;
-        } else {
+        if (!(Yii::$app->request->isAjax && Yii::$app->request->isPost)) {
             throw new BadRequestHttpException('Запрос не ajax\'овский!!!');
         }
     }
@@ -74,7 +71,7 @@ class SwitchAction extends Action
      */
     protected function findModel($id)
     {
-        /** @var \backend\my\yii2\CrudController $this->controller */
+        /** @var \backend\my\yii2\AjaxCrudController $this->controller */
         /** @var ActiveRecord $class */
         $class = $this->controller->modelClass;
         if ($id !== null && ($this->model = $class::findOne($id)) !== null) {

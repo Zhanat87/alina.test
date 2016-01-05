@@ -5,15 +5,14 @@ namespace backend\modules\user\controllers;
 use Yii;
 use backend\modules\user\models\User;
 use backend\modules\user\models\search\UserSearch;
-use backend\my\yii2\CrudController;
+use backend\my\yii2\AjaxCrudController;
 use yii\widgets\ActiveForm;
 use backend\modules\rbac\models\AuthItem;
-use yii\web\Response;
 
 /**
  * UserController implements the CRUD actions for User model.
  */
-class UserController extends CrudController
+class UserController extends AjaxCrudController
 {
 
     /**
@@ -67,7 +66,6 @@ class UserController extends CrudController
         $model->setScenario($model::SCENARIO_CREATE);
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-            Yii::$app->response->format = Response::FORMAT_JSON;
             if($model->save()) {
                 return Yii::$app->params['response']['success'];
             } else {
@@ -91,7 +89,6 @@ class UserController extends CrudController
         $model = $this->findModel($id);
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-            Yii::$app->response->format = Response::FORMAT_JSON;
             if($model->save()) {
                 return Yii::$app->params['response']['success'];
             } else {

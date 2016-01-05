@@ -3,7 +3,6 @@
 namespace backend\modules\book\services;
 
 use backend\modules\book\controllers\IndexController;
-use yii\web\Response;
 use Yii;
 
 /**
@@ -19,7 +18,6 @@ class ImageRemove
     {
         $indexController->isAjax();
         if ($indexController->csrfValidate($indexController->getParam('_csrf'))) {
-            Yii::$app->response->format = Response::FORMAT_JSON;
             $model = $indexController->findModel($indexController->getParam('id'));
             unlink($model->getImagePath());
             unlink($model->getThumbPath());

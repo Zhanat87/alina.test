@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 
 /**
- * IndexController implements the CRUD actions for News model.
+ * IndexControllerAjax implements the CRUD actions for News model.
  */
 class IndexController extends Controller
 {

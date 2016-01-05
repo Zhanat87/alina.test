@@ -2,20 +2,41 @@
 
 namespace backend\my\yii2;
 
+use Yii;
 use yii\web\NotFoundHttpException;
 use backend\my\actions\SwitchAction;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
 use common\my\yii2\ActiveRecord;
+use yii\web\Response;
 
 /**
- * Class CrudController
+ * Class AjaxCrudController
  * @package backend\my\yii2
  */
-class CrudController extends Controller
+class AjaxCrudController extends Controller
 {
 
     public $modelClass;
+
+    /**
+     * @inheritdoc
+     */
+    public function beforeAction($action)
+    {
+        if (parent::beforeAction($action)) {
+            $this->setResponseFormat();
+            return true;
+        }
+        return false;
+    }
+
+    private function setResponseFormat()
+    {
+        if (!in_array($this->action->id, ['index', 'view'])) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+        }
+    }
 
     public function actions()
     {
