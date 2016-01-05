@@ -36,6 +36,9 @@ class AjaxCrudController extends Controller
         if (!in_array($this->action->id, ['index', 'view'])) {
             Yii::$app->response->format = Response::FORMAT_JSON;
         }
+        if (in_array($this->action->id, ['create', 'update']) && !Yii::$app->request->isPost) {
+            Yii::$app->response->format = Response::FORMAT_HTML;
+        }
     }
 
     public function actions()
