@@ -16,13 +16,11 @@ class ImageRemove
 
     public static function run(IndexController $indexController)
     {
-        $indexController->isAjax();
         if ($indexController->csrfValidate($indexController->getParam('_csrf'))) {
             $model = $indexController->findModel($indexController->getParam('id'));
-            unlink($model->getImagePath());
-            unlink($model->getThumbPath());
+            $model->cleanFiles();
             $model->image = null;
-            return Yii::$app->params['response'][$model->save() ? 'success' : 'error'];
+            return Yii::$app->params['response'][$model->save(false) ? 'success' : 'error'];
         }
     }
 

@@ -51,7 +51,7 @@ class IndexController extends AjaxCrudController
         $model = new Book;
         if (Yii::$app->request->isPost) {
             $model->load(Yii::$app->request->post());
-            if($model->save()) {
+            if ($model->save()) {
                 return Yii::$app->params['response']['success'];
             } else {
                 return ActiveForm::validate($model);

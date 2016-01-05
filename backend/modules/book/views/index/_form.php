@@ -34,7 +34,7 @@ use yii\helpers\Html;
             <?php if ($model->image) : ?>
                 <div class="imageDiv">
                     <?php
-                    echo Html::img($model->getThumbUrl(), ['alt' => 'NO IMG']);
+                    echo Html::img($model->getThumbFileUrl('image', 'thumb'), ['alt' => 'NO IMG']);
                     ?>
                     <a href="#" class="btn btn-danger removeImage"
                        data-toggle="tooltip"

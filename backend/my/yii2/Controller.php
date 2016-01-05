@@ -102,7 +102,7 @@ class Controller extends YiiController
      * @return bool
      * @throws BadRequestHttpException
      */
-    protected function csrfValidate($csrf, $ajax = false)
+    public function csrfValidate($csrf, $ajax = false)
     {
         if ($csrf == Yii::$app->request->csrfTokenFromHeader) {
             return true;

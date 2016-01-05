@@ -4,7 +4,7 @@ namespace backend\modules\book\models;
 
 use Yii;
 use common\my\yii2\ActiveRecord;
-use yii\imagine\Image;
+use backend\my\behaviors\ImageBehavior;
 
 /**
  * This is the model class for table "book".
@@ -28,9 +28,6 @@ class Book extends ActiveRecord
             'publish_date',
         ],
     ];
-
-    const DIR = 'images/books/';
-    const THUMB_PREFIX = 'thumb-';
 
     /**
      * @inheritdoc
@@ -79,83 +76,21 @@ class Book extends ActiveRecord
         return $this->hasOne(Author::class, ['id' => 'author_id']);
     }
 
-    /**
-     * @param bool $insert
-     * @return bool
-     */
-    public function beforeSave($insert)
+    public function behaviors()
     {
-        if (parent::beforeSave($insert)) {
-            $this->uploadImage();
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private function uploadImage()
-    {
-        if (isset($_FILES['Book']) && is_array($_FILES['Book'])) {
-            $imageTypes = [
-                'image/jpeg' => 'jpg',
-                'image/png' => 'png',
-                'image/gif' => 'gif',
-            ];
-            if (isset($imageTypes[$_FILES['Book']['type']['image']])) {
-                $imageName = Yii::$app->security->generateRandomString() . '.' .
-                    $imageTypes[$_FILES['Book']['type']['image']];
-                if (move_uploaded_file($_FILES['Book']['tmp_name']['image'],
-                    Yii::getAlias('@backend/web/') . self::DIR . $imageName)) {
-                    $this->image = $imageName;
-                    Image::thumbnail($this->getImagePath(), 50, 50)
-                        ->save($this->getThumbPath(), ['quality' => 80]);
-                }
-            } else {
-                $this->addError('image', 'Невалидное изображение');
-            }
-        }
-    }
-
-    public function getImagePath()
-    {
-        return $this->image ? Yii::getAlias('@backend/web/') . self::DIR . $this->image : null;
-    }
-
-    public function getThumbPath()
-    {
-        return $this->image ? Yii::getAlias('@backend/web/') . self::DIR . self::THUMB_PREFIX . $this->image : null;
-    }
-
-    public function getImageUrl()
-    {
-        return $this->image ? Yii::$app->params['backendDomainName'] . self::DIR . $this->image : null;
-    }
-
-    public function getThumbUrl()
-    {
-        return $this->image ? Yii::$app->params['backendDomainName'] . self::DIR .
-            self::THUMB_PREFIX . $this->image : null;
-    }
-
-    /**
-     * @return bool
-     */
-    public function beforeDelete()
-    {
-        if (parent::beforeDelete()) {
-            $this->deleteImage();
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    private function deleteImage()
-    {
-        if ($this->image) {
-            unlink($this->getImagePath());
-            unlink($this->getThumbPath());
-        }
+        return [
+            [
+                'class' => ImageBehavior::className(),
+                'attribute' => 'image',
+                'thumbs' => [
+                    'thumb' => ['width' => 50, 'height' => 50],
+                ],
+                'filePath' => '@webroot/images/books/[[pk]].[[extension]]',
+                'fileUrl' => '/images/books/[[pk]].[[extension]]',
+                'thumbPath' => '@webroot/images/books/[[profile]]_[[pk]].[[extension]]',
+                'thumbUrl' => '/images/books/[[profile]]_[[pk]].[[extension]]',
+            ],
+        ];
     }
 
 }
