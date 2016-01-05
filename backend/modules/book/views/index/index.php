@@ -77,10 +77,10 @@ BookAsset::register($this);
                             [
                                 'attribute'     => 'publish_date',
                                 'filterOptions' => [
-                                    'class' => 'dateFilter',
+                                    'class' => 'dateRangeFilter',
                                 ],
                                 'options' => [
-                                    'style' => 'width: 142px',
+                                    'style' => 'width: 200px',
                                 ],
                             ],
                             [

@@ -68,7 +68,7 @@ class BookSearch extends Book
         }
 
         if ($this->publish_date) {
-            $interval = Yii::$app->current->getDateInterval($this->publish_date);
+            $interval = Yii::$app->current->getDateRangeInterval($this->publish_date, false);
             $query->andFilterWhere([
                 'between', 'publish_date', $interval[0], $interval[1]
             ]);
