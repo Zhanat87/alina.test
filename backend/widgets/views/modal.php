@@ -2,7 +2,8 @@
 use backend\assets\ModalAsset;
 ModalAsset::register($this);
 ?>
-<div class="md-modal md-effect-1" id="actionModal"<?php echo $style; ?>>
+<div class="md-modal md-effect-1" id="actionModal"
+    <?php if ($width) { echo ' style="width: ' . $width . '; max-width: ' . $width . ';"'; } ?>>
     <div class="md-content">
         <div class="modal-header">
             <button class="md-close close">&times;</button>

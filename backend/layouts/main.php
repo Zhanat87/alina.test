@@ -8,7 +8,7 @@ use backend\widgets\Header;
 use backend\widgets\Footer;
 use backend\widgets\Sidebar;
 use backend\widgets\BreadCrumbs;
-use backend\widgets\Alert;
+use common\widgets\Alert;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
