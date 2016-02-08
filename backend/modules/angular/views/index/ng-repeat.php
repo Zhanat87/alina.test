@@ -18,7 +18,7 @@ AngularAsset::register($this);
         <?php echo Html::encode($this->title); ?>
     </h1>
     <div class="booksRepeatDiv" ng-controller="booksRepeatCtrl" url="<?php echo Url::to('/angular/index/ng-repeat'); ?>">
-        <table class="table table-hover table-responsive">
+        <table class="table table-hover table-condensed table-striped table-bordered">
             <tr>
                 <td>ID</td>
                 <td>name</td>
