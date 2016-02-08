@@ -16,6 +16,7 @@ use common\widgets\Alert;
 AppAsset::register($this);
 DatePickerAsset::register($this);
 IE9Asset::register($this);
+\backend\assets\GridViewConstAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

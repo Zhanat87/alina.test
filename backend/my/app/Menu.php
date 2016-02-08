@@ -84,6 +84,20 @@ class Menu
             'visible' => $this->appAccess->isUser(true),
             'url'     => Url::to('/book/index/index'),
         ];
+        $data[] = [
+            'label'   => 'Angular',
+            'icon'    => 'fa fa-cubes',
+            'active'  => $this->module == 'angular',
+            'visible' => $this->appAccess->isAdmin(),
+            'subMenu' => [
+                [
+                    'url'     => Url::to('/angular/index/ng-repeat'),
+                    'label'   => 'ng-repeat',
+                    'active'  => $this->controller == 'angular' && $this->action == 'ng-repeat',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
+            ],
+        ];
         return $data;
     }
 
@@ -127,8 +141,7 @@ class Menu
                     ],
                 ],
             ];
-        }
-        if ($this->module == 'news') {
+        } else if ($this->module == 'news') {
             $data[] = [
                 'label'   => 'Новости',
                 'icon'    => 'fa fa-list',
@@ -136,14 +149,20 @@ class Menu
                 'visible' => $this->appAccess->isUser(true),
                 'url'     => Url::to('/news/index/index'),
             ];
-        }
-        if ($this->module == 'book') {
+        } else if ($this->module == 'book') {
             $data[] = [
                 'label'   => 'Книги',
                 'icon'    => 'fa fa-book',
                 'active'  => $this->module == 'book',
                 'visible' => $this->appAccess->isUser(true),
                 'url'     => Url::to('/book/index/index'),
+            ];
+        } else if ($this->module == 'angular') {
+            $data[] = [
+                'url'     => Url::to('/angular/index/ng-repeat'),
+                'label'   => 'ng-repeat',
+                'active'  => $this->controller == 'angular' && $this->action == 'ng-repeat',
+                'visible' => $this->appAccess->isAdmin(),
             ];
         }
         return $data;

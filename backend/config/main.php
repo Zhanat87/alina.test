@@ -28,6 +28,9 @@ return [
         'book'          => [
             'class' => 'backend\modules\book\Book',
         ],
+        'angular'          => [
+            'class' => 'backend\modules\angular\Angular',
+        ],
     ],
     'components'          => [
         'user'         => [
