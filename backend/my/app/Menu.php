@@ -96,6 +96,12 @@ class Menu
                     'active'  => $this->controller == 'angular' && $this->action == 'ng-repeat',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
+                [
+                    'url'     => Url::to('/angular/index/module'),
+                    'label'   => 'module',
+                    'active'  => $this->controller == 'angular' && $this->action == 'module',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
             ],
         ];
         return $data;
@@ -162,6 +168,12 @@ class Menu
                 'url'     => Url::to('/angular/index/ng-repeat'),
                 'label'   => 'ng-repeat',
                 'active'  => $this->controller == 'angular' && $this->action == 'ng-repeat',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/module'),
+                'label'   => 'module',
+                'active'  => $this->controller == 'angular' && $this->action == 'module',
                 'visible' => $this->appAccess->isAdmin(),
             ];
         }

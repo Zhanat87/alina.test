@@ -12,12 +12,13 @@ class AngularAsset extends AssetBundle
 {
 
     public $css = [
-//        'myfiles/css/book.css',
+        'angular/css/module.css',
     ];
 
     public $js = [
         'angular/angular.js',
         'angular/ngRepeat.js',
+        'angular/module.js',
     ];
 
     public $depends = [
