@@ -45,5 +45,22 @@ function ngEvents()
             console.log("Event type:" + e.type);
             $scope.data.columnColor = e.type == "mouseover" ? "Green" : "Blue";
         };
-    });
+        $scope.message = "Hover me!";
+    }).directive("tap", function () {
+        return function (scope, elem, attrs) {
+            elem.on("mouseenter", function () {
+                // здесь используется метод jqLite on для того чтобы указать обработчик на события touchstart и touchend
+                scope.$apply(attrs["tap"]);
+                // scope.$apply(attrs["tap"]) используется для чтобы достать значение атрибута tap и применить его к scope
+                // таким образом замещая значение свойства message
+            }).on("mouseleave", function () {
+                scope.$apply(attrs["focusout"]);
+            });
+            // с помощью выражения .directive можно создать пользовательскую директиву,
+            // directive принимает 2 аргумента 1й это название директивы а второй фабричная функция
+            // которая возвращает функцию принимающую 3 аргумента:scope - контекст в котором будет выполнятся функция,
+            // elem - это jqLite представление элемента  к которому применена директива и
+            // attrs - это коллекция атрибутов примененных к элементу
+        }
+    });;
 }

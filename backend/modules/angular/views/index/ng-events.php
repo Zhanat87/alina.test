@@ -76,4 +76,9 @@ AngularNgEventsAsset::register($this);
             </tr>
         </table>
     </div>
+    <div id="tasksPanel" class="panel" ng-controller="ngEventsCtrl">
+        <div class="well" tap="message = 'Hovered!'" focusout="message='focus out'">
+            {{message}}
+        </div>
+    </div>
 </div>
