@@ -48,6 +48,11 @@ class IndexController extends Controller
         return $this->render('partial-views');
     }
 
+    public function actionPartial($template)
+    {
+        return $this->renderPartial('partial_views/' . $template);
+    }
+
     public function actionNgCloak()
     {
         return $this->render('ng-cloak');

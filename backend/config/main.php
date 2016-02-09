@@ -62,6 +62,7 @@ return [
                 'profile'                                                                  => 'user/deny/profile',
                 'profile-edit'                                                             => 'user/deny/profile-edit',
                 'reset-password'                                                           => 'user/allow/reset-password',
+                'angular/index/partial/<template:.*[\.html]>' => 'angular/index/partial',
                 '<controller:[a-zA-Z0-9-]+>/<action:[a-zA-Z0-9-]+>'                        => '<controller>/<action>',
                 '<controller:\w+>/<action:(update|view|delete)>/<id:\d+>'                  => '<controller>/<action>',
                 '<module:[a-zA-Z0-9-]+>/<controller:[a-zA-Z0-9-]+>/<action:[a-zA-Z0-9-]+>' =>
