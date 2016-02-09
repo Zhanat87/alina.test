@@ -63,11 +63,11 @@ class IndexController extends Controller
         return $this->render('ng-if-hide-show');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionNgClassStyle()
+    {
+        return $this->render('ng-class-style');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
