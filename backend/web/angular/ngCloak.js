@@ -1,10 +1,11 @@
-builtInVariables();
-function builtInVariables()
+ngCloak();
+function ngCloak()
 {
     $('html').attr('ng-app', 'MyApp');
     var app = angular.module("MyApp", []);
 
-    app.controller("builtInVariables", function($scope, $http) {
+    app.controller("ngCloakCtrl", function($scope, $http) {
+        $scope.data = {};
         $scope.tasks = [
             { action: "Buy flowers", complete: false },
             { action: "Go to gym", complete: false },

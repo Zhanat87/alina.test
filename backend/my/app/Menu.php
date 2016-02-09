@@ -120,6 +120,18 @@ class Menu
                     'active'  => $this->controller == 'angular' && $this->action == 'built-in-variables',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
+                [
+                    'url'     => Url::to('/angular/index/partial-views'),
+                    'label'   => 'partial-views',
+                    'active'  => $this->controller == 'angular' && $this->action == 'partial-views',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
+                [
+                    'url'     => Url::to('/angular/index/ng-cloak'),
+                    'label'   => 'ng-cloak',
+                    'active'  => $this->controller == 'angular' && $this->action == 'ng-cloak',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
             ],
         ];
         return $data;
@@ -210,6 +222,18 @@ class Menu
                 'url'     => Url::to('/angular/index/built-in-variables'),
                 'label'   => 'built-in-variables',
                 'active'  => $this->controller == 'angular' && $this->action == 'built-in-variables',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/partial-views'),
+                'label'   => 'partial-views',
+                'active'  => $this->controller == 'angular' && $this->action == 'partial-views',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/ng-cloak'),
+                'label'   => 'ng-cloak',
+                'active'  => $this->controller == 'angular' && $this->action == 'ng-cloak',
                 'visible' => $this->appAccess->isAdmin(),
             ];
         }

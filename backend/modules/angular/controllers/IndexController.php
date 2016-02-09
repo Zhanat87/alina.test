@@ -43,4 +43,14 @@ class IndexController extends Controller
         return $this->render('built-in-variables');
     }
 
+    public function actionPartialViews()
+    {
+        return $this->render('partial-views');
+    }
+
+    public function actionNgCloak()
+    {
+        return $this->render('ng-cloak');
+    }
+
 }
