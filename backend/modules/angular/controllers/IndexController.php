@@ -58,4 +58,129 @@ class IndexController extends Controller
         return $this->render('ng-cloak');
     }
 
+    public function actionNgIfHideShow()
+    {
+        return $this->render('ng-if-hide-show');
+    }
+
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+
 }
