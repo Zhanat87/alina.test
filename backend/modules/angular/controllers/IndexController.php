@@ -78,11 +78,11 @@ class IndexController extends Controller
         return $this->render('ng-attributes');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionFilter()
+    {
+        return $this->render('filter');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');

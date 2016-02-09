@@ -156,12 +156,12 @@ class Menu
                     'active'  => $this->controller == 'angular' && $this->action == 'ng-attributes',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->controller == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/filter'),
+                    'label'   => 'filter',
+                    'active'  => $this->controller == 'angular' && $this->action == 'filter',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -458,12 +458,12 @@ class Menu
                 'active'  => $this->controller == 'angular' && $this->action == 'ng-attributes',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->controller == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/filter'),
+                'label'   => 'filter',
+                'active'  => $this->controller == 'angular' && $this->action == 'filter',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',
