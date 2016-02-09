@@ -19,7 +19,7 @@ AngularModuleAsset::register($this);
         <?php echo Html::encode($this->title); ?>
     </h1>
     <h2 class="h1">Список покупок</h2>
-    <div class="panel" ng-controller="ListCtrl">
+    <div class="panel" ng-controller="listCtrl">
         <!--Поведение содержимого в рамках этого элемента будет управляться с помощью класса listCtrl, определенного в module.js.-->
         <span class="h4">Осталось {{remain()}} из {{items.length}}</span>
         <!--Конструкция {{ }} указывает на место связывания данных в HTML.
