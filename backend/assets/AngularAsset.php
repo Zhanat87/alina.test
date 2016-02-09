@@ -19,6 +19,7 @@ class AngularAsset extends AssetBundle
         'angular/angular.js',
         'angular/ngRepeat.js',
         'angular/module.js',
+        'angular/oneTwoBind.js',
     ];
 
     public $depends = [

@@ -102,6 +102,18 @@ class Menu
                     'active'  => $this->controller == 'angular' && $this->action == 'module',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
+                [
+                    'url'     => Url::to('/angular/index/one-bind'),
+                    'label'   => 'one-bind',
+                    'active'  => $this->controller == 'angular' && $this->action == 'one-bind',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
+                [
+                    'url'     => Url::to('/angular/index/two-bind'),
+                    'label'   => 'two-bind',
+                    'active'  => $this->controller == 'angular' && $this->action == 'two-bind',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
             ],
         ];
         return $data;
@@ -174,6 +186,18 @@ class Menu
                 'url'     => Url::to('/angular/index/module'),
                 'label'   => 'module',
                 'active'  => $this->controller == 'angular' && $this->action == 'module',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/one-bind'),
+                'label'   => 'one-bind',
+                'active'  => $this->controller == 'angular' && $this->action == 'one-bind',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/two-bind'),
+                'label'   => 'two-bind',
+                'active'  => $this->controller == 'angular' && $this->action == 'two-bind',
                 'visible' => $this->appAccess->isAdmin(),
             ];
         }

@@ -28,4 +28,14 @@ class IndexController extends Controller
         return $this->render('module');
     }
 
+    public function actionOneBind()
+    {
+        return $this->render('one-bind');
+    }
+
+    public function actionTwoBind()
+    {
+        return $this->render('two-bind');
+    }
+
 }
