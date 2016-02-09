@@ -90,4 +90,27 @@ AngularNgRepeatAsset::register($this);
             </tbody>
         </table>
     </div>
+    <div id="tasksPanel" class="panel" ng-controller="tasksRepeatCtrl">
+        <h3 class="panel-header">Tasks List</h3>
+        <pre>
+            очень часто в разработке мы сталкиваемся со случаями когда нам нужно генерировать
+            повторно целые шаблоны и к сожалению директива ng-repeat этого не позволяет
+            решением проблемы является использование директив ng-repeat-start и ng-repeat-end
+            в этом случае мы четко определяем откуда у нас будет начинатся шаблон для повторения
+            (ng-repeat-start) и где он заканчивается (ng-repeat-end)
+            ng-repeat-start будет повторять элементы до тех пор пока не встретит ng-repeat-end,
+            далее выполняется переход на следующую итерацию
+        </pre>
+        <table class="table">
+            <tr ng-repeat-start="task in tasks">
+                <td>№ {{$index}}</td>
+            </tr>
+            <tr>
+                <td>Description: {{task.action}}</td>
+            </tr>
+            <tr ng-repeat-end>
+                <td>The {{$index}} task is {{task.complete ? '' : "not "}} done</td>
+            </tr>
+        </table>
+    </div>
 </div>
