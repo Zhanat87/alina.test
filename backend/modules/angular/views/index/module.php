@@ -1,8 +1,8 @@
 <?php
 
 use yii\helpers\Html;
-use yii\helpers\Url;
 use backend\assets\AngularAsset;
+use backend\assets\AngularModuleAsset;
 
 /**
  * @var yii\web\View $this
@@ -12,6 +12,7 @@ $this->title = 'module';
 $this->params['breadcrumbs'][] = $this->title;
 
 AngularAsset::register($this);
+AngularModuleAsset::register($this);
 ?>
 <div class="row">
     <h1>

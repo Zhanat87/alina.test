@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 use backend\assets\AngularAsset;
+use backend\assets\AngularNgRepeatAsset;
 
 /**
  * @var yii\web\View $this
@@ -12,6 +13,7 @@ $this->title = 'ng-repeat';
 $this->params['breadcrumbs'][] = $this->title;
 
 AngularAsset::register($this);
+AngularNgRepeatAsset::register($this);
 ?>
 <div class="row">
     <h1>

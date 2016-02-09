@@ -1,8 +1,8 @@
 <?php
 
 use yii\helpers\Html;
-use yii\helpers\Url;
 use backend\assets\AngularAsset;
+use backend\assets\AngularBindingAsset;
 
 /**
  * @var yii\web\View $this
@@ -12,6 +12,7 @@ $this->title = 'two-way binding';
 $this->params['breadcrumbs'][] = $this->title;
 
 AngularAsset::register($this);
+AngularBindingAsset::register($this);
 ?>
 <div class="row">
     <h1>
