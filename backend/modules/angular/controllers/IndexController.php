@@ -83,11 +83,11 @@ class IndexController extends Controller
         return $this->render('filter');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionValidation()
+    {
+        return $this->render('validation');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
