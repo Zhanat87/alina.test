@@ -68,11 +68,11 @@ class IndexController extends Controller
         return $this->render('ng-class-style');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionNgEvents()
+    {
+        return $this->render('ng-events');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');

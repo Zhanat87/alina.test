@@ -5,14 +5,14 @@ namespace backend\assets;
 use backend\my\yii2\AssetBundle;
 
 /**
- * Class AngularAsset
+ * Class AngularNgEventsAsset
  * @package backend\assets
  */
-class Angular1Asset extends AssetBundle
+class AngularNgEventsAsset extends AssetBundle
 {
 
     public $js = [
-        'angular/.js',
+        'angular/ngEvents.js',
     ];
 
     public $depends = [

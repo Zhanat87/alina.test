@@ -144,12 +144,12 @@ class Menu
                     'active'  => $this->controller == 'angular' && $this->action == 'ng-class-style',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->controller == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/ng-events'),
+                    'label'   => 'ng-events',
+                    'active'  => $this->controller == 'angular' && $this->action == 'ng-events',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -446,12 +446,12 @@ class Menu
                 'active'  => $this->controller == 'angular' && $this->action == 'ng-class-style',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->controller == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/ng-events'),
+                'label'   => 'ng-events',
+                'active'  => $this->controller == 'angular' && $this->action == 'ng-events',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',
