@@ -12,7 +12,8 @@ class AngularAsset extends AssetBundle
 {
 
     public $js = [
-        'angular/angular.js',
+//        'angular/angular.js',
+        'angular/angular.min.js',
     ];
 
     public $depends = [

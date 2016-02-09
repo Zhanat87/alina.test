@@ -114,6 +114,12 @@ class Menu
                     'active'  => $this->controller == 'angular' && $this->action == 'two-bind',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
+                [
+                    'url'     => Url::to('/angular/index/built-in-variables'),
+                    'label'   => 'built-in-variables',
+                    'active'  => $this->controller == 'angular' && $this->action == 'built-in-variables',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
             ],
         ];
         return $data;
@@ -198,6 +204,12 @@ class Menu
                 'url'     => Url::to('/angular/index/two-bind'),
                 'label'   => 'two-bind',
                 'active'  => $this->controller == 'angular' && $this->action == 'two-bind',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/built-in-variables'),
+                'label'   => 'built-in-variables',
+                'active'  => $this->controller == 'angular' && $this->action == 'built-in-variables',
                 'visible' => $this->appAccess->isAdmin(),
             ];
         }

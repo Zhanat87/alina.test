@@ -38,4 +38,9 @@ class IndexController extends Controller
         return $this->render('two-bind');
     }
 
+    public function actionBuiltInVariables()
+    {
+        return $this->render('built-in-variables');
+    }
+
 }
