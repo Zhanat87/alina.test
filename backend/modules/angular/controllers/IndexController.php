@@ -93,11 +93,11 @@ class IndexController extends Controller
         return $this->render('form');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionBasicController()
+    {
+        return $this->render('basic-controller');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
