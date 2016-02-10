@@ -88,11 +88,11 @@ class IndexController extends Controller
         return $this->render('validation');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionForm()
+    {
+        return $this->render('form');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
