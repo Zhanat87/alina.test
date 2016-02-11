@@ -113,11 +113,11 @@ class IndexController extends Controller
         return $this->render('multiple-controllers');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionWorkingWithOtherFrameworks()
+    {
+        return $this->render('working-with-other-frameworks');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
