@@ -5,14 +5,15 @@ namespace backend\assets;
 use backend\my\yii2\AssetBundle;
 
 /**
- * Class AngularAsset
+ * Class AngularCustomFiltersAsset
  * @package backend\assets
  */
-class Angular1Asset extends AssetBundle
+class AngularCustomFiltersAsset extends AssetBundle
 {
 
     public $js = [
-        'angular/.js',
+        'angular/customFilters.js',
+        'angular/customFilters2.js',
     ];
 
     public $depends = [

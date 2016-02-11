@@ -133,11 +133,11 @@ class IndexController extends Controller
         return $this->render('filters-chain');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionCustomFilters()
+    {
+        return $this->render('custom-filters');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
