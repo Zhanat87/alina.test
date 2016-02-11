@@ -138,11 +138,11 @@ class IndexController extends Controller
         return $this->render('custom-filters');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionCustomDirectives()
+    {
+        return $this->render('custom-directives');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
