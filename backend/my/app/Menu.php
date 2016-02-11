@@ -205,9 +205,9 @@ class Menu
                     'visible' => $this->appAccess->isAdmin(),
                 ],
                 [
-                    'url'     => Url::to('/angular/index/currency-filter'),
-                    'label'   => 'currency-filter',
-                    'active'  => $this->controller == 'angular' && $this->action == 'currency-filter',
+                    'url'     => Url::to('/angular/index/filter-single-data'),
+                    'label'   => 'filter-single-data',
+                    'active'  => $this->controller == 'angular' && $this->action == 'filter-single-data',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
 //                [
@@ -747,9 +747,9 @@ class Menu
                 'visible' => $this->appAccess->isAdmin(),
             ];
             $data[] = [
-                'url'     => Url::to('/angular/index/currency-filter'),
-                'label'   => 'currency-filter',
-                'active'  => $this->controller == 'angular' && $this->action == 'currency-filter',
+                'url'     => Url::to('/angular/index/filter-single-data'),
+                'label'   => 'filter-single-data',
+                'active'  => $this->controller == 'angular' && $this->action == 'filter-single-data',
                 'visible' => $this->appAccess->isAdmin(),
             ];
 //            $data[] = [

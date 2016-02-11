@@ -118,9 +118,9 @@ class IndexController extends Controller
         return $this->render('working-with-other-frameworks');
     }
 
-    public function actionCurrencyFilter()
+    public function actionFilterSingleData()
     {
-        return $this->render('currency-filter');
+        return $this->render('filter-single-data');
     }
 
 //    public function action()

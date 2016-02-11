@@ -5,14 +5,15 @@ namespace backend\assets;
 use backend\my\yii2\AssetBundle;
 
 /**
- * Class AngularCurrencyFilterAsset
+ * Class AngularFilterSingleDataAsset
  * @package backend\assets
  */
-class AngularCurrencyFilterAsset extends AssetBundle
+class AngularFilterSingleDataAsset extends AssetBundle
 {
 
     public $js = [
-        'angular/currencyFilter.js',
+        'angular/angular-locale_de-de.js',
+        'angular/filterSingleData.js',
     ];
 
     public $depends = [

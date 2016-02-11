@@ -1,12 +1,12 @@
-currencyFilter();
-function currencyFilter()
+filterSingleData();
+function filterSingleData()
 {
     $('html').attr('ng-app', 'MyApp');
     var app = angular.module("MyApp", []);
 
-    app.controller("currencyFilterCtrl", function($scope, $http) {
+    app.controller("filterSingleDataCtrl", function($scope, $http) {
         $scope.items = [
-            { itemName: "Milk", itemCategory: "Dairy", itemPrice: 1.40, expireDate: 1 },
+            { itemName: "Milk", itemCategory: "Dairy", itemPrice: 12345678.40, expireDate: 1 },
             { itemName: "Cheese", itemCategory: "Dairy", itemPrice: 2.40, expireDate: 2 },
             { itemName: "Water", itemCategory: "Drinks", itemPrice: 1.20, expireDate: 366 },
             { itemName: "Juice", itemCategory: "Drinks", itemPrice: 3.30, expireDate: 60 },
@@ -23,5 +23,10 @@ function currencyFilter()
         //   - теряется возможность использовать одни и те же данные в разных view,
         //     так как они уже модифицированы в источнике
         //   - число превращается в строку и для операций с числами нужно парсить строку
+
+        $scope.getExpiryDate = function (days) {
+            var now = new Date();
+            return now.setDate(now.getDate() + days);
+        }
     });
 }
