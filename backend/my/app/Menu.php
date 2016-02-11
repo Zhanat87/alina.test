@@ -318,12 +318,12 @@ class Menu
                     'active'  => $this->module == 'angular' && $this->action == 'processing-dangerous-data',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/processing-expressions'),
+                    'label'   => 'processing-expressions',
+                    'active'  => $this->module == 'angular' && $this->action == 'processing-expressions',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -866,12 +866,12 @@ class Menu
                 'active'  => $this->module == 'angular' && $this->action == 'processing-dangerous-data',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/processing-expressions'),
+                'label'   => 'processing-expressions',
+                'active'  => $this->module == 'angular' && $this->action == 'processing-expressions',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',

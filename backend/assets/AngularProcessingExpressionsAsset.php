@@ -5,14 +5,14 @@ namespace backend\assets;
 use backend\my\yii2\AssetBundle;
 
 /**
- * Class AngularAsset
+ * Class AngularProcessingExpressionsAsset
  * @package backend\assets
  */
-class Angular1Asset extends AssetBundle
+class AngularProcessingExpressionsAsset extends AssetBundle
 {
 
     public $js = [
-        'angular/.js',
+        'angular/processingExpressions.js',
     ];
 
     public $depends = [

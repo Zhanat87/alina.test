@@ -218,11 +218,11 @@ class IndexController extends Controller
         return $this->render('processing-dangerous-data');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionProcessingExpressions()
+    {
+        return $this->render('processing-expressions');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
