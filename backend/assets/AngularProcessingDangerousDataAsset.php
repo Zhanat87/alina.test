@@ -5,14 +5,15 @@ namespace backend\assets;
 use backend\my\yii2\AssetBundle;
 
 /**
- * Class AngularAsset
+ * Class AngularProcessingDangerousDataAsset
  * @package backend\assets
  */
-class Angular1Asset extends AssetBundle
+class AngularProcessingDangerousDataAsset extends AssetBundle
 {
 
     public $js = [
-        'angular/.js',
+        'angular/angular_sanitize.js',
+        'angular/processingDangerousData.js',
     ];
 
     public $depends = [

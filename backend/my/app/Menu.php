@@ -312,12 +312,12 @@ class Menu
                     'active'  => $this->module == 'angular' && $this->action == 'handling-exceptions',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/processing-dangerous-data'),
+                    'label'   => 'processing-dangerous-data',
+                    'active'  => $this->module == 'angular' && $this->action == 'processing-dangerous-data',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -860,12 +860,12 @@ class Menu
                 'active'  => $this->module == 'angular' && $this->action == 'handling-exceptions',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/processing-dangerous-data'),
+                'label'   => 'processing-dangerous-data',
+                'active'  => $this->module == 'angular' && $this->action == 'processing-dangerous-data',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',
