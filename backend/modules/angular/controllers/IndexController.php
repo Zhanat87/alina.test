@@ -98,11 +98,11 @@ class IndexController extends Controller
         return $this->render('basic-controller');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionControllerCommunication()
+    {
+        return $this->render('controller-communication');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
