@@ -148,11 +148,11 @@ class IndexController extends Controller
         return $this->render('jq-lite');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionCreatingComplexDirectives()
+    {
+        return $this->render('creating-complex-directives');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');

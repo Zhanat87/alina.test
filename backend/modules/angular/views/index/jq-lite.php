@@ -18,6 +18,10 @@ AngularJqLiteAsset::register($this);
     <h1>
         <?php echo Html::encode($this->title); ?>
     </h1>
+    <p>
+        обратите внимание: если скрипт jquery подключен раньше чем скрипт angular,
+        то Angular проверяет подключен ли в документе jquery и если нет то использует jqLite
+    </p>
     <pre>
         jqLite является урезанной версией JQuery, которую содержит AngularJS и
         которая используется для создания, манипулирования и управления элементами HTML разметки
