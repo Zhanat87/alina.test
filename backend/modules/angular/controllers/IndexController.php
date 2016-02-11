@@ -108,11 +108,11 @@ class IndexController extends Controller
         return $this->render('controller-inheritance');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionMultipleControllers()
+    {
+        return $this->render('multiple-controllers');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
