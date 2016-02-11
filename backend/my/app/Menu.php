@@ -210,12 +210,12 @@ class Menu
                     'active'  => $this->controller == 'angular' && $this->action == 'filter-single-data',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->controller == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/filtering-data-collection'),
+                    'label'   => 'filtering-data-collection',
+                    'active'  => $this->controller == 'angular' && $this->action == 'filtering-data-collection',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -752,12 +752,12 @@ class Menu
                 'active'  => $this->controller == 'angular' && $this->action == 'filter-single-data',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->controller == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/filtering-data-collection'),
+                'label'   => 'filtering-data-collection',
+                'active'  => $this->controller == 'angular' && $this->action == 'filtering-data-collection',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',

@@ -123,11 +123,11 @@ class IndexController extends Controller
         return $this->render('filter-single-data');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionFilteringDataCollection()
+    {
+        return $this->render('filtering-data-collection');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
