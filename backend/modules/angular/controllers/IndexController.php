@@ -153,11 +153,11 @@ class IndexController extends Controller
         return $this->render('creating-complex-directives');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionManipulatingWithScope()
+    {
+        return $this->render('manipulating-with-scope');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');

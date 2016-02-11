@@ -246,12 +246,12 @@ class Menu
                     'active'  => $this->module == 'angular' && $this->action == 'creating-complex-directives',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/manipulating-with-scope'),
+                    'label'   => 'manipulating-with-scope',
+                    'active'  => $this->module == 'angular' && $this->action == 'manipulating-with-scope',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -788,12 +788,12 @@ class Menu
                 'active'  => $this->module == 'angular' && $this->action == 'creating-complex-directives',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/manipulating-with-scope'),
+                'label'   => 'manipulating-with-scope',
+                'active'  => $this->module == 'angular' && $this->action == 'manipulating-with-scope',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',
