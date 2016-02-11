@@ -163,11 +163,11 @@ class IndexController extends Controller
         return $this->render('module-extension');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionModuleDependency()
+    {
+        return $this->render('module-dependency');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');

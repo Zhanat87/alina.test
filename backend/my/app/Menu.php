@@ -252,12 +252,12 @@ class Menu
                     'active'  => $this->module == 'angular' && $this->action == 'manipulating-with-scope',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/module-dependency'),
+                    'label'   => 'module-dependency',
+                    'active'  => $this->module == 'angular' && $this->action == 'module-dependency',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -800,12 +800,12 @@ class Menu
                 'active'  => $this->module == 'angular' && $this->action == 'module-extension',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/module-dependency'),
+                'label'   => 'module-dependency',
+                'active'  => $this->module == 'angular' && $this->action == 'module-dependency',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',
