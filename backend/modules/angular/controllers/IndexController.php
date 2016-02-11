@@ -158,11 +158,11 @@ class IndexController extends Controller
         return $this->render('manipulating-with-scope');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionModuleExtension()
+    {
+        return $this->render('module-extension');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');

@@ -5,14 +5,15 @@ namespace backend\assets;
 use backend\my\yii2\AssetBundle;
 
 /**
- * Class AngularAsset
+ * Class AngularModuleExtensionAsset
  * @package backend\assets
  */
-class Angular1Asset extends AssetBundle
+class AngularModuleExtensionAsset extends AssetBundle
 {
 
     public $js = [
-        'angular/.js',
+        'angular/moduleExtension.js',
+        'angular/moduleExtensionDirective.js',
     ];
 
     public $depends = [
