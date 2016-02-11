@@ -118,6 +118,136 @@ class IndexController extends Controller
         return $this->render('working-with-other-frameworks');
     }
 
+    public function actionCurrencyFilter()
+    {
+        return $this->render('currency-filter');
+    }
+
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+//
+//    public function action()
+//    {
+//        return $this->render('');
+//    }
+
 //    public function action()
 //    {
 //        return $this->render('');

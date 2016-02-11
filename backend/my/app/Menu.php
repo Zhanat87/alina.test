@@ -204,6 +204,246 @@ class Menu
                     'active'  => $this->controller == 'angular' && $this->action == 'working-with-other-frameworks',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
+                [
+                    'url'     => Url::to('/angular/index/currency-filter'),
+                    'label'   => 'currency-filter',
+                    'active'  => $this->controller == 'angular' && $this->action == 'currency-filter',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
+//                [
+//                    'url'     => Url::to('/angular/index/'),
+//                    'label'   => '',
+//                    'active'  => $this->controller == 'angular' && $this->action == '',
+//                    'visible' => $this->appAccess->isAdmin(),
+//                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -506,6 +746,246 @@ class Menu
                 'active'  => $this->controller == 'angular' && $this->action == 'working-with-other-frameworks',
                 'visible' => $this->appAccess->isAdmin(),
             ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/currency-filter'),
+                'label'   => 'currency-filter',
+                'active'  => $this->controller == 'angular' && $this->action == 'currency-filter',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
+//            $data[] = [
+//                'url'     => Url::to('/angular/index/'),
+//                'label'   => '',
+//                'active'  => $this->controller == 'angular' && $this->action == '',
+//                'visible' => $this->appAccess->isAdmin(),
+//            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',
