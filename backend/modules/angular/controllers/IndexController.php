@@ -168,11 +168,11 @@ class IndexController extends Controller
         return $this->render('module-dependency');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionCreatingAndUsingServices()
+    {
+        return $this->render('creating-and-using-services');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');

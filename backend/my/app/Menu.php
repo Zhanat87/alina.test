@@ -258,12 +258,12 @@ class Menu
                     'active'  => $this->module == 'angular' && $this->action == 'module-dependency',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/creating-and-using-services'),
+                    'label'   => 'creating-and-using-services',
+                    'active'  => $this->module == 'angular' && $this->action == 'creating-and-using-services',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -806,12 +806,12 @@ class Menu
                 'active'  => $this->module == 'angular' && $this->action == 'module-dependency',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/creating-and-using-services'),
+                'label'   => 'creating-and-using-services',
+                'active'  => $this->module == 'angular' && $this->action == 'creating-and-using-services',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',
