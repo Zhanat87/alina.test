@@ -128,11 +128,11 @@ class IndexController extends Controller
         return $this->render('filtering-data-collection');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionFiltersChain()
+    {
+        return $this->render('filters-chain');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
