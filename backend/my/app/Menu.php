@@ -264,12 +264,12 @@ class Menu
                     'active'  => $this->module == 'angular' && $this->action == 'creating-and-using-services',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/built-in-services-list'),
+                    'label'   => 'built-in-services-list',
+                    'active'  => $this->module == 'angular' && $this->action == 'built-in-services-list',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -812,12 +812,12 @@ class Menu
                 'active'  => $this->module == 'angular' && $this->action == 'creating-and-using-services',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/built-in-services-list'),
+                'label'   => 'built-in-services-list',
+                'active'  => $this->module == 'angular' && $this->action == 'built-in-services-list',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',

@@ -173,11 +173,11 @@ class IndexController extends Controller
         return $this->render('creating-and-using-services');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionBuiltInServicesList()
+    {
+        return $this->render('built-in-services-list');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
