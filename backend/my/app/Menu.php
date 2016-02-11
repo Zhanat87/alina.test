@@ -186,12 +186,12 @@ class Menu
                     'active'  => $this->controller == 'angular' && $this->action == 'controller-communication',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->controller == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/controller-inheritance'),
+                    'label'   => 'controller-inheritance',
+                    'active'  => $this->controller == 'angular' && $this->action == 'controller-inheritance',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -488,12 +488,12 @@ class Menu
                 'active'  => $this->controller == 'angular' && $this->action == 'controller-communication',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->controller == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/controller-inheritance'),
+                'label'   => 'controller-inheritance',
+                'active'  => $this->controller == 'angular' && $this->action == 'controller-inheritance',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',

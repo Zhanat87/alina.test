@@ -103,11 +103,11 @@ class IndexController extends Controller
         return $this->render('controller-communication');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionControllerInheritance()
+    {
+        return $this->render('controller-inheritance');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
