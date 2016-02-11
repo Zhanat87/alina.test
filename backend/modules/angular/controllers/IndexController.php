@@ -143,11 +143,11 @@ class IndexController extends Controller
         return $this->render('custom-directives');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionJqLite()
+    {
+        return $this->render('jq-lite');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');

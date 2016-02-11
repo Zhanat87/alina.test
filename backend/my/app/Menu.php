@@ -234,12 +234,12 @@ class Menu
                     'active'  => $this->controller == 'angular' && $this->action == 'custom-directives',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->controller == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/jq-lite'),
+                    'label'   => 'jq-lite',
+                    'active'  => $this->controller == 'angular' && $this->action == 'jq-lite',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -776,12 +776,12 @@ class Menu
                 'active'  => $this->controller == 'angular' && $this->action == 'custom-directives',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->controller == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/jq-lite'),
+                'label'   => 'jq-lite',
+                'active'  => $this->controller == 'angular' && $this->action == 'jq-lite',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',
