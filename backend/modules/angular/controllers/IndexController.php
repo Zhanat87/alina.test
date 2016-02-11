@@ -178,36 +178,36 @@ class IndexController extends Controller
         return $this->render('built-in-services-list');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
+    public function actionWindowService()
+    {
+        return $this->render('window-service');
+    }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionDocumentService()
+    {
+        return $this->render('document-service');
+    }
+
+    public function actionIntervalAndTimeoutServices()
+    {
+        return $this->render('interval-and-timeout-services');
+    }
+
+    public function actionLocationService()
+    {
+        return $this->render('location-service');
+    }
+
+    public function actionAnchorScrollService()
+    {
+        return $this->render('anchor-scroll-service');
+    }
+
+    public function actionLogService()
+    {
+        return $this->render('log-service');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
