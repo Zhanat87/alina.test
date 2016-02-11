@@ -208,11 +208,11 @@ class IndexController extends Controller
         return $this->render('log-service');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionHandlingExceptions()
+    {
+        return $this->render('handling-exceptions');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');

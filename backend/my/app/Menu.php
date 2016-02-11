@@ -306,12 +306,12 @@ class Menu
                     'active'  => $this->module == 'angular' && $this->action == 'log-service',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/handling-exceptions'),
+                    'label'   => 'handling-exceptions',
+                    'active'  => $this->module == 'angular' && $this->action == 'handling-exceptions',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -854,12 +854,12 @@ class Menu
                 'active'  => $this->module == 'angular' && $this->action == 'log-service',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/handling-exceptions'),
+                'label'   => 'handling-exceptions',
+                'active'  => $this->module == 'angular' && $this->action == 'handling-exceptions',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',

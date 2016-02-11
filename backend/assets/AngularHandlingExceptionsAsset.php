@@ -5,14 +5,14 @@ namespace backend\assets;
 use backend\my\yii2\AssetBundle;
 
 /**
- * Class AngularAsset
+ * Class AngularHandlingExceptionsAsset
  * @package backend\assets
  */
-class Angular1Asset extends AssetBundle
+class AngularHandlingExceptionsAsset extends AssetBundle
 {
 
     public $js = [
-        'angular/.js',
+        'angular/handlingExceptions.js',
     ];
 
     public $depends = [
