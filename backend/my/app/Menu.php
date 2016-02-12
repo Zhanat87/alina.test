@@ -336,12 +336,12 @@ class Menu
                     'active'  => $this->module == 'angular' && $this->action == 'ajax-using-config-in-requests',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/http-provider'),
+                    'label'   => 'http-provider',
+                    'active'  => $this->module == 'angular' && $this->action == 'http-provider',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -884,12 +884,12 @@ class Menu
                 'active'  => $this->module == 'angular' && $this->action == 'ajax-using-config-in-requests',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/http-provider'),
+                'label'   => 'http-provider',
+                'active'  => $this->module == 'angular' && $this->action == 'http-provider',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',
