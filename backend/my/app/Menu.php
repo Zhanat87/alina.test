@@ -354,12 +354,12 @@ class Menu
                     'active'  => $this->module == 'angular' && $this->action == 'ajax-http',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/ajax-using-resource'),
+                    'label'   => 'ajax-using-resource',
+                    'active'  => $this->module == 'angular' && $this->action == 'ajax-using-resource',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -902,12 +902,12 @@ class Menu
                 'active'  => $this->module == 'angular' && $this->action == 'ajax-http',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/ajax-using-resource'),
+                'label'   => 'ajax-using-resource',
+                'active'  => $this->module == 'angular' && $this->action == 'ajax-using-resource',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',

@@ -248,11 +248,11 @@ class IndexController extends Controller
         return $this->render('ajax-http');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionAjaxUsingResource()
+    {
+        return $this->render('ajax-using-resource');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
