@@ -5,14 +5,16 @@ namespace backend\assets;
 use backend\my\yii2\AssetBundle;
 
 /**
- * Class AngularAsset
+ * Class AngularTestsAsset
  * @package backend\assets
  */
-class Angular1Asset extends AssetBundle
+class AngularTestsAsset extends AssetBundle
 {
 
     public $js = [
-        'angular/.js',
+        'angular/angular-mocks.js',
+        'angular/karma.config.js',
+        'angular/tests.js',
     ];
 
     public $depends = [

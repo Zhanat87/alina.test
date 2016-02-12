@@ -263,11 +263,11 @@ class IndexController extends Controller
         return $this->render('ajax-url-parameters');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionTests()
+    {
+        return $this->render('tests');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');

@@ -372,12 +372,12 @@ class Menu
                     'active'  => $this->module == 'angular' && $this->action == 'ajax-url-parameters',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/tests'),
+                    'label'   => 'tests',
+                    'active'  => $this->module == 'angular' && $this->action == 'tests',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -920,12 +920,12 @@ class Menu
                 'active'  => $this->module == 'angular' && $this->action == 'ajax-url-parameters',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/tests'),
+                'label'   => 'tests',
+                'active'  => $this->module == 'angular' && $this->action == 'tests',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',
