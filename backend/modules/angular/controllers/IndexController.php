@@ -223,11 +223,11 @@ class IndexController extends Controller
         return $this->render('processing-expressions');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionBasicAjax()
+    {
+        return $this->render('basic-ajax');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
