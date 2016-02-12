@@ -4,31 +4,31 @@ function ajaxUrlParameters()
     $('html').attr('ng-app', 'MyApp');
     var app = angular.module("MyApp", ["ngResource", "ngRoute"]);
     /// <reference path="editorView.html" />
-    app.constant("baseUrl", "http://backend.alina.test/angular/index/partial/")
+    app.constant("baseUrl", "http://backend.alina.test/angular/index/product/")
         .config(function ($routeProvider) {
 
             $routeProvider.when("/list", {
-                templateUrl: "http://backend.alina.test/angular/index/partial/tableViewUrlParameters.html"
+                templateUrl: "/angular/index/partial/tableViewUrlParameters.html"
             });
 
             $routeProvider.when("/edit/:id", {
-                templateUrl: "http://backend.alina.test/angular/index/partial/editorViewUrlParameters.html"
+                templateUrl: "/angular/index/partial/editorViewUrlParameters.html"
             });
 
             $routeProvider.when("/create", {
-                templateUrl: "http://backend.alina.test/angular/index/partial/editorViewUrlParameters.html"
+                templateUrl: "/angular/index/partial/editorViewUrlParameters.html"
             });
 
             $routeProvider.otherwise({
-                templateUrl: "http://backend.alina.test/angular/index/partial/tableViewUrlParameters.html"
+                templateUrl: "/angular/index/partial/tableViewUrlParameters.html"
             });
         })
         .controller("ajaxUrlParametersCtrl", function ($scope, $http, $resource, $location, $route, $routeParams, baseUrl) {
-            //$route сервис может использоватся для изменения url, для этого он содержит несколько свойств и метод:
+            // $route сервис может использоватся для изменения url, для этого он содержит несколько свойств и метод:
             //    current - возвращает объект который содержит информацию об активном url
             //    reload() - перезагружает view даже если url не изменился
             //    routes - возвращает коллекцию url которые определены через $routeProvider
-            //Так же этот сервис содержит ряд событий которые можно обрабатывать:
+            //    Так же этот сервис содержит ряд событий которые можно обрабатывать:
             //    $routeChangeStart - генерируется перед изменением URL
             //    $routeChangeSuccess - генерируется после успешного изменения URL
             //    $routeUpdate - генерируется при обновлении URL
