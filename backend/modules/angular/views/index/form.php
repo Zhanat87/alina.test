@@ -64,17 +64,14 @@ AngularFormAsset::register($this);
         ng-false-value определяет значение которое установится выражением привязки данных
         когда состояние элемента будет "не выбран"
     </pre>
-    <p>
-
-    </p>
     <div id="tasksPanel" class="panel" ng-controller="form2Ctrl">
         <form name="myForm" novalidate>
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <div class="checkbox">
                         <label>
-                            <input name="sample" type="checkbox" ng-model="inputValue2" ng-true-value="Checked"
-                                   ng-false-value="Unchecked" />
+                            <input name="sample" type="checkbox" ng-model="inputValue2" ng-true-value="1"
+                                   ng-false-value="0" />
                             Checkbox
                         </label>
                     </div>

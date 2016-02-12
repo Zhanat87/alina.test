@@ -174,6 +174,16 @@ class IndexController extends Controller
         return $this->render('creating-and-using-services');
     }
 
+    public function actionCreatingAndUsingServices2()
+    {
+        return $this->render('creating-and-using-services2');
+    }
+
+    public function actionCreatingAndUsingServices3()
+    {
+        return $this->render('creating-and-using-services3');
+    }
+
     public function actionBuiltInServicesList()
     {
         return $this->render('built-in-services-list');

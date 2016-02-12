@@ -265,6 +265,18 @@ class Menu
                     'visible' => $this->appAccess->isAdmin(),
                 ],
                 [
+                    'url'     => Url::to('/angular/index/creating-and-using-services2'),
+                    'label'   => 'creating-and-using-services2',
+                    'active'  => $this->module == 'angular' && $this->action == 'creating-and-using-services2',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
+                [
+                    'url'     => Url::to('/angular/index/creating-and-using-services3'),
+                    'label'   => 'creating-and-using-services3',
+                    'active'  => $this->module == 'angular' && $this->action == 'creating-and-using-services3',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
+                [
                     'url'     => Url::to('/angular/index/built-in-services-list'),
                     'label'   => 'built-in-services-list',
                     'active'  => $this->module == 'angular' && $this->action == 'built-in-services-list',
@@ -810,6 +822,18 @@ class Menu
                 'url'     => Url::to('/angular/index/creating-and-using-services'),
                 'label'   => 'creating-and-using-services',
                 'active'  => $this->module == 'angular' && $this->action == 'creating-and-using-services',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/creating-and-using-services2'),
+                'label'   => 'creating-and-using-services2',
+                'active'  => $this->module == 'angular' && $this->action == 'creating-and-using-services2',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/creating-and-using-services3'),
+                'label'   => 'creating-and-using-services3',
+                'active'  => $this->module == 'angular' && $this->action == 'creating-and-using-services3',
                 'visible' => $this->appAccess->isAdmin(),
             ];
             $data[] = [

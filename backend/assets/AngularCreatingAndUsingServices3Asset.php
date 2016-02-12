@@ -5,14 +5,14 @@ namespace backend\assets;
 use backend\my\yii2\AssetBundle;
 
 /**
- * Class AngularCreatingAndUsingServicesAsset
+ * Class AngularCreatingAndUsingServices3Asset
  * @package backend\assets
  */
-class AngularCreatingAndUsingServicesAsset extends AssetBundle
+class AngularCreatingAndUsingServices3Asset extends AssetBundle
 {
 
     public $js = [
-        'angular/usingFactoryMethodLogService.js',
+        'angular/usingProviderMethodLogService.js',
         'angular/creatingAndUsingServices.js',
     ];
 
