@@ -15,12 +15,13 @@ class IndexController extends Controller
 
     public function actionNgRepeat()
     {
-        if (Yii::$app->request->isAjax) {
-            Yii::$app->response->format = Response::FORMAT_JSON;
-            return Book::find()->limit(10)->all();
-        } else {
-            return $this->render('ng-repeat');
-        }
+        return $this->render('ng-repeat');
+    }
+
+    public function actionNgRepeat2()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        return Book::find()->limit(10)->all();
     }
 
     public function actionModule()

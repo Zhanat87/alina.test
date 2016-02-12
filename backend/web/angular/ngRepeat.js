@@ -12,7 +12,7 @@ function ngRepeat()
     app.controller("booksRepeatCtrl", function($scope, $http) {
         // $scope содержит данные модели. Это связующее звено между контроллером и видом.
         // $scope всего лишь один из сервисов, внедренных в контроллер.
-        $http.get($('#booksRepeatDiv').attr('url')).
+        $http.get($('.booksRepeatDiv').attr('url')).
         success(function(data, status, headers, config) {
             $scope.books = data;
         }).

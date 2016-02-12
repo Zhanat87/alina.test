@@ -19,7 +19,15 @@ AngularNgRepeatAsset::register($this);
     <h1>
         <?php echo Html::encode($this->title); ?>
     </h1>
-    <div class="booksRepeatDiv" ng-controller="booksRepeatCtrl" url="<?php echo Url::to('/angular/index/ng-repeat'); ?>">
+    <pre>
+        это один из самых распространенных способов использования ng-repeat -
+        генерация строк таблицы на основе коллекции данных
+        источником данных может быть что-то перечислимое например массив или объект
+        итерируя элементами массив angularjs создает экземпляр каждого item и
+        на этом экземпляре можно получить доступ к непосредственно самому объекту
+    </pre>
+    <div class="booksRepeatDiv" ng-controller="booksRepeatCtrl"
+         url="<?php echo Url::to('/angular/index/ng-repeat2'); ?>">
         <table class="table table-hover table-condensed table-striped table-bordered">
             <thead>
                 <tr>
@@ -36,11 +44,6 @@ AngularNgRepeatAsset::register($this);
                     <td>{{book.author_id}}</td>
                     <td>{{book.publish_date}}</td>
                 </tr>
-                <!--это один из самых распространенных способов использования ng-repeat -
-                генерация строк таблицы на основе коллекции данных-->
-                <!--источником данных может быть что-то перечислимое например массив или объект-->
-                <!--итерируя элементами массив angularjs создает экземпляр каждого item и
-                на этом экземпляре можно получить доступ к непосредственно самому объекту-->
             </tbody>
         </table>
     </div>
