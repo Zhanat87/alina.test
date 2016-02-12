@@ -2,24 +2,23 @@
 
 use yii\helpers\Html;
 use backend\assets\AngularAsset;
-use backend\assets\AngularBindingAsset;
+use backend\assets\AngularAjaxServicesForViewsAsset;
 
 /**
  * @var yii\web\View $this
  */
 
-$this->title = '';
+$this->title = 'ajax services for views';
 $this->params['breadcrumbs'][] = $this->title;
 
 AngularAsset::register($this);
-AngularBindingAsset::register($this);
+AngularAjaxServicesForViewsAsset::register($this);
 ?>
 <div class="row">
     <h1>
         <?php echo Html::encode($this->title); ?>
     </h1>
-    <pre>
-
-    </pre>
-
+    <div class="panel panel-primary" ng-controller="ajaxServicesForViewsCtrl">
+        <div ng-view></div>
+    </div>
 </div>

@@ -360,18 +360,18 @@ class Menu
                     'active'  => $this->module == 'angular' && $this->action == 'ajax-using-resource',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/ajax-services-for-views'),
+                    'label'   => 'ajax-services-for-views',
+                    'active'  => $this->module == 'angular' && $this->action == 'ajax-services-for-views',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
+                [
+                    'url'     => Url::to('/angular/index/ajax-url-parameters'),
+                    'label'   => 'ajax-url-parameters',
+                    'active'  => $this->module == 'angular' && $this->action == 'ajax-url-parameters',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -908,18 +908,18 @@ class Menu
                 'active'  => $this->module == 'angular' && $this->action == 'ajax-using-resource',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/ajax-services-for-views'),
+                'label'   => 'ajax-services-for-views',
+                'active'  => $this->module == 'angular' && $this->action == 'ajax-services-for-views',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/ajax-url-parameters'),
+                'label'   => 'ajax-url-parameters',
+                'active'  => $this->module == 'angular' && $this->action == 'ajax-url-parameters',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',

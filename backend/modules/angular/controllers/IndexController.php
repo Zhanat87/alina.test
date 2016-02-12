@@ -253,16 +253,16 @@ class IndexController extends Controller
         return $this->render('ajax-using-resource');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionAjaxServicesForViews()
+    {
+        return $this->render('ajax-services-for-views');
+    }
+
+    public function actionAjaxUrlParameters()
+    {
+        return $this->render('ajax-url-parameters');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
