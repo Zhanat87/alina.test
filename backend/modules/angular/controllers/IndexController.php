@@ -238,11 +238,11 @@ class IndexController extends Controller
         return $this->render('http-provider');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionAjaxWithoutRest()
+    {
+        return $this->render('ajax-without-rest');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
