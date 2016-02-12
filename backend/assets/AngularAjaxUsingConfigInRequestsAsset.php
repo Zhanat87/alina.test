@@ -5,14 +5,14 @@ namespace backend\assets;
 use backend\my\yii2\AssetBundle;
 
 /**
- * Class AngularAsset
+ * Class AngularAjaxUsingConfigInRequestsAsset
  * @package backend\assets
  */
-class Angular1Asset extends AssetBundle
+class AngularAjaxUsingConfigInRequestsAsset extends AssetBundle
 {
 
     public $js = [
-        'angular/.js',
+        'angular/ajaxUsingConfigInRequests.js',
     ];
 
     public $depends = [

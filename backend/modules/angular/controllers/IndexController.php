@@ -228,11 +228,11 @@ class IndexController extends Controller
         return $this->render('basic-ajax');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
-//
+    public function actionAjaxUsingConfigInRequests()
+    {
+        return $this->render('ajax-using-config-in-requests');
+    }
+
 //    public function action()
 //    {
 //        return $this->render('');
