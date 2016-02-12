@@ -96,8 +96,8 @@ AngularAjaxHttpAsset::register($this);
         $http.jsonp
     </pre>
     <div ng-controller="ajaxHttpCtrl">
-        <ng-include src="'loginPage.html'" ng-show="displayPage == 'loginPage'"></ng-include>
-        <ng-include src="'createAccountPage.html'" ng-show="displayPage == 'createAccountPage'"></ng-include>
-        <ng-include src="'privatePage.html'" ng-show="displayPage == 'privatePage'"></ng-include>
+        <ng-include src="'partial/loginPageHttp.html'" ng-show="displayPage == 'loginPage'"></ng-include>
+        <ng-include src="'partial/createAccountPageHttp.html'" ng-show="displayPage == 'createAccountPage'"></ng-include>
+        <ng-include src="'partial/privatePageHttp.html'" ng-show="displayPage == 'privatePage'"></ng-include>
     </div>
 </div>

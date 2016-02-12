@@ -4,15 +4,15 @@ function ajaxHttp()
     $('html').attr('ng-app', 'MyApp');
     var app = angular.module("MyApp", []);
 
-    app.constant("baseUrl", "http://backend.alina.test/angular/http/")
+    app.constant("baseUrl", "http://backend.alina.test/angular/index/partial/")
         .controller("ajaxHttpCtrl", function ($scope, $http, baseUrl) {
-            // изначально отобьражаемая страница
+            // изначально отображаемая страница
             $scope.displayPage = "loginPage";
             console.log(baseUrl);
             // метод используется для входа пользователя в систему или
             // перенаправления его на страницу создания аккаунта
             $scope.logIn = function (user) {
-                $http.get(baseUrl).success(function (data) {
+                $http.get(baseUrl + "createAccountPageHttp.html").success(function (data) {
                     var storage = data;
                     if ($scope.containRequiredProp(user)) {
                         for (var i = 0; i < storage.length; i++) {
@@ -46,7 +46,7 @@ function ajaxHttp()
             // создает аккаунт
             $scope.createAccount = function (user) {
                 if (angular.isObject(user)) {
-                    //angular.isObject используется для проверки объект ли значение
+                    // angular.isObject используется для проверки объект ли значение
                     if ($scope.containRequiredProp(user)) {
                         $http.post(baseUrl, angular.toJson(user));
                         $scope.displayPage = "loginPage";
