@@ -4,23 +4,23 @@ function ajaxServicesForViews()
     $('html').attr('ng-app', 'MyApp');
 
     angular.module("MyApp", ["ngResource", "ngRoute"])
-        .constant("baseUrl", "http://backend.alina.test/angular/services-for-views/")
+        .constant("baseUrl", "http://backend.alina.test/angular/index/product/")
         .config(function ($routeProvider) {
             // сервис $routeProvider используется управления путями в приложении
             $routeProvider.when("/list", {
-                templateUrl: "tableView.html"
+                templateUrl: "/angular/index/partial/tableView.html"
             });
 
             $routeProvider.when("/edit", {
-                templateUrl: "editorView.html"
+                templateUrl: "/angular/index/partial/editorView.html"
             });
 
             $routeProvider.when("/create", {
-                templateUrl: "editorView.html"
+                templateUrl: "/angular/index/partial/editorView.html"
             });
 
             $routeProvider.otherwise({
-                templateUrl: "tableView.html"
+                templateUrl: "/angular/index/partial/tableView.html"
             });
         })
         .controller("ajaxServicesForViewsCtrl", function ($scope, $http, $resource, $location, baseUrl) {

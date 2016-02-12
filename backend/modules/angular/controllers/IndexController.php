@@ -26,9 +26,6 @@ class IndexController extends Controller
 
     public function actionProduct()
     {
-        Yii::$app->request->enableCsrfValidation = false;
-        Yii::$app->request->enableCsrfCookie = false;
-        Yii::$app->request->enableCookieValidation = false;
         Yii::$app->response->format = Response::FORMAT_JSON;
         switch (Yii::$app->request->method) {
             case 'GET' :
