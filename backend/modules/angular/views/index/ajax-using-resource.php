@@ -19,7 +19,7 @@ AngularAjaxUsingResourceAsset::register($this);
         <?php echo Html::encode($this->title); ?>
     </h1>
     <div class="panel panel-primary" ng-controller="ajaxUsingResourceCtrl">
-        <ng-include src="'tableView.html'" ng-show="displayMode == 'list'" ></ng-include>
-        <ng-include src="'editorView.html'" ng-show="displayMode == 'edit'"></ng-include>
+        <ng-include src="'partial/tableView.html'" ng-show="displayMode == 'list'" ></ng-include>
+        <ng-include src="'partial/editorView.html'" ng-show="displayMode == 'edit'"></ng-include>
     </div>
 </div>

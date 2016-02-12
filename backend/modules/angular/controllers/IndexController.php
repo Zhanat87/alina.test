@@ -24,6 +24,50 @@ class IndexController extends Controller
         return Book::find()->limit(10)->all();
     }
 
+    public function actionProduct()
+    {
+        Yii::$app->request->enableCsrfValidation = false;
+        Yii::$app->request->enableCsrfCookie = false;
+        Yii::$app->request->enableCookieValidation = false;
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        switch (Yii::$app->request->method) {
+            case 'GET' :
+                $products = [
+                    [
+                        'name' => 'test ' . mt_rand(1, 100),
+                        'price' => mt_rand(1, 100),
+                    ],
+                    [
+                        'name' => 'test ' . mt_rand(1, 100),
+                        'price' => mt_rand(1, 100),
+                    ],
+                    [
+                        'name' => 'test ' . mt_rand(1, 100),
+                        'price' => mt_rand(1, 100),
+                    ],
+                    [
+                        'name' => 'test ' . mt_rand(1, 100),
+                        'price' => mt_rand(1, 100),
+                    ],
+                    [
+                        'name' => 'test ' . mt_rand(1, 100),
+                        'price' => mt_rand(1, 100),
+                    ],
+                ];
+                return $products;
+                break;
+            case 'POST' :
+                return $this->getSuccessResponse($this->getParams());
+                break;
+            case 'PUT' :
+                return $this->getSuccessResponse($this->getParams());
+                break;
+            case 'DELETE' :
+                return $this->getSuccessResponse($this->getParams());
+                break;
+        }
+    }
+
     public function actionModule()
     {
         return $this->render('module');
