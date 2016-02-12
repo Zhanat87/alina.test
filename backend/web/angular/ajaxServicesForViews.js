@@ -1,74 +1,80 @@
-﻿angular.module("studyModule", ["ngResource", "ngRoute"])
-.constant("baseUrl", "http://backend.alina.test/angular/services-for-views/")
-.config(function ($routeProvider) {    
-    // сервис $routeProvider используется управления путями в приложении
-    $routeProvider.when("/list", {
-        templateUrl: "tableView.html"
-    });
+﻿ajaxServicesForViews();
+function ajaxServicesForViews()
+{
+    $('html').attr('ng-app', 'MyApp');
 
-    $routeProvider.when("/edit", {
-        templateUrl: "editorView.html"
-    });
+    angular.module("MyApp", ["ngResource", "ngRoute"])
+        .constant("baseUrl", "http://backend.alina.test/angular/services-for-views/")
+        .config(function ($routeProvider) {
+            // сервис $routeProvider используется управления путями в приложении
+            $routeProvider.when("/list", {
+                templateUrl: "tableView.html"
+            });
 
-    $routeProvider.when("/create", {
-        templateUrl: "editorView.html"
-    });
+            $routeProvider.when("/edit", {
+                templateUrl: "editorView.html"
+            });
 
-    $routeProvider.otherwise({
-        templateUrl: "tableView.html"
-    });
-})
-.controller("ajaxServicesForViewsCtrl", function ($scope, $http, $resource, $location, baseUrl) {
+            $routeProvider.when("/create", {
+                templateUrl: "editorView.html"
+            });
 
-    $scope.currentProduct = null;
+            $routeProvider.otherwise({
+                templateUrl: "tableView.html"
+            });
+        })
+        .controller("ajaxServicesForViewsCtrl", function ($scope, $http, $resource, $location, baseUrl) {
 
-    $scope.productsResource = $resource(baseUrl + ":id", { id: "@id" });    
+            $scope.currentProduct = null;
 
-    $scope.listProducts = function () {
-        $scope.products = $scope.productsResource.query();        
-    }
+            $scope.productsResource = $resource(baseUrl + ":id", {id: "@id"});
 
-    $scope.deleteProduct = function (product) {
-        product.$delete().then(function () {            
-            $scope.products.splice($scope.products.indexOf(product), 1);
-        });
-        
-        $location.path("/list");
-    }
+            $scope.listProducts = function () {
+                $scope.products = $scope.productsResource.query();
+            }
 
-    $scope.createProduct = function (product) {
-        new $scope.productsResource(product).$save().then(function (newProduct) {
-            $scope.products.push(newProduct);
-            $location.path("/list");
-        });
-    }
+            $scope.deleteProduct = function (product) {
+                product.$delete().then(function () {
+                    $scope.products.splice($scope.products.indexOf(product), 1);
+                });
 
-    $scope.updateProduct = function (product) {
-        product.$save();
-        $location.path("/list");
-    }
+                $location.path("/list");
+            }
 
-    $scope.editProduct = function (product) {
-        $scope.currentProduct = product;
-        $location.path("/edit");
-    }
+            $scope.createProduct = function (product) {
+                new $scope.productsResource(product).$save().then(function (newProduct) {
+                    $scope.products.push(newProduct);
+                    $location.path("/list");
+                });
+            }
 
-    $scope.saveEdit = function (product) {
-        if (angular.isDefined(product.id)) {
-            $scope.updateProduct(product);
-        } else {
-            $scope.createProduct(product);
-        }
+            $scope.updateProduct = function (product) {
+                product.$save();
+                $location.path("/list");
+            }
 
-        $scope.currentProduct = {};
-    }
+            $scope.editProduct = function (product) {
+                $scope.currentProduct = product;
+                $location.path("/edit");
+            }
 
-    $scope.cancelEdit = function () {
-        if ($scope.currentProduct && $scope.currentProduct.$get) {
-            $scope.currentProduct.$get();
-        }
-        $scope.currentProduct = {};
-        $location.path("/list");
-    }
-    $scope.listProducts();
-})
+            $scope.saveEdit = function (product) {
+                if (angular.isDefined(product.id)) {
+                    $scope.updateProduct(product);
+                } else {
+                    $scope.createProduct(product);
+                }
+
+                $scope.currentProduct = {};
+            }
+
+            $scope.cancelEdit = function () {
+                if ($scope.currentProduct && $scope.currentProduct.$get) {
+                    $scope.currentProduct.$get();
+                }
+                $scope.currentProduct = {};
+                $location.path("/list");
+            }
+            $scope.listProducts();
+        })
+}
