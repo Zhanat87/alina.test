@@ -13,7 +13,7 @@ class AngularCreatingAndUsingServices2Asset extends AssetBundle
 
     public $js = [
         'angular/usingServiceMethodLogService.js',
-        'angular/creatingAndUsingServices.js',
+        'angular/creatingAndUsingServices2.js',
     ];
 
     public $depends = [

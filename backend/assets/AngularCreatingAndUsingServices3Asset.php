@@ -13,7 +13,7 @@ class AngularCreatingAndUsingServices3Asset extends AssetBundle
 
     public $js = [
         'angular/usingProviderMethodLogService.js',
-        'angular/creatingAndUsingServices.js',
+        'angular/creatingAndUsingServices3.js',
     ];
 
     public $depends = [

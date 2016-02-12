@@ -4,8 +4,8 @@ function creatingAndUsingServices3()
     $('html').attr('ng-app', 'studyModule');
 
     angular.module("studyModule", ["additionalModule", "customServices"])
-        .config(function (logServiceProvider) {
-            logServiceProvider.debugEnabled(true).messageCounterEnabled(true);
+        .config(function (usingProviderMethodLogServiceProvider) {
+            usingProviderMethodLogServiceProvider.debugEnabled(true).messageCounterEnabled(true);
             // AngularJS для provider объектов предоставляет возможность работать с
             // Dependency Injection используя имя сервиса + слово Provider,
             // таким образом мы получаем provider объект, лучше всего использовать provider

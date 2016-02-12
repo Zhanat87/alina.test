@@ -3,7 +3,7 @@ function creatingAndUsingServices2()
 {
     $('html').attr('ng-app', 'studyModule');
 
-    angular.module("studyModule", ["additionalModule2", "customServices2"])
+    angular.module("studyModule", ["additionalModule", "customServices"])
         .controller("studyCtrl", function ($scope, usingServiceMethodLogService) {
             $scope.data = {
                 cities: ["London", "New York", "Paris"],
