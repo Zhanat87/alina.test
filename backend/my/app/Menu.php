@@ -348,12 +348,12 @@ class Menu
                     'active'  => $this->module == 'angular' && $this->action == 'ajax-without-rest',
                     'visible' => $this->appAccess->isAdmin(),
                 ],
-//                [
-//                    'url'     => Url::to('/angular/index/'),
-//                    'label'   => '',
-//                    'active'  => $this->module == 'angular' && $this->action == '',
-//                    'visible' => $this->appAccess->isAdmin(),
-//                ],
+                [
+                    'url'     => Url::to('/angular/index/ajax-http'),
+                    'label'   => 'ajax-http',
+                    'active'  => $this->module == 'angular' && $this->action == 'ajax-http',
+                    'visible' => $this->appAccess->isAdmin(),
+                ],
 //                [
 //                    'url'     => Url::to('/angular/index/'),
 //                    'label'   => '',
@@ -896,12 +896,12 @@ class Menu
                 'active'  => $this->module == 'angular' && $this->action == 'ajax-without-rest',
                 'visible' => $this->appAccess->isAdmin(),
             ];
-//            $data[] = [
-//                'url'     => Url::to('/angular/index/'),
-//                'label'   => '',
-//                'active'  => $this->module == 'angular' && $this->action == '',
-//                'visible' => $this->appAccess->isAdmin(),
-//            ];
+            $data[] = [
+                'url'     => Url::to('/angular/index/ajax-http'),
+                'label'   => 'ajax-http',
+                'active'  => $this->module == 'angular' && $this->action == 'ajax-http',
+                'visible' => $this->appAccess->isAdmin(),
+            ];
 //            $data[] = [
 //                'url'     => Url::to('/angular/index/'),
 //                'label'   => '',

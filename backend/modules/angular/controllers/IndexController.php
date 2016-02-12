@@ -243,10 +243,10 @@ class IndexController extends Controller
         return $this->render('ajax-without-rest');
     }
 
-//    public function action()
-//    {
-//        return $this->render('');
-//    }
+    public function actionAjaxHttp()
+    {
+        return $this->render('ajax-http');
+    }
 
 //    public function action()
 //    {
