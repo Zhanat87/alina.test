@@ -1,24 +1,27 @@
-login();
-function login()
+contact();
+function contact()
 {
     var app = angular.module("MyApp", []);
-    app.config(getAjaxConfig()).controller('loginCtrl', function ($scope, $http) {
-        $scope.login = function (user) {
-            $('.usernameInput, .passwordInput').removeClass('ngDirty');
+    app.config(getAjaxConfig()).controller('contactCtrl', function ($scope, $http) {
+        $scope.notYetSendEmail = true;
+        $scope.sendForm = function (contact) {
+            $('.nameInput, .emailInput, .subjectInput, .bodyTextarea').removeClass('ngDirty');
             $('.pError').remove();
-            $http.post('/site/login-ajax', user)
+            $http.post('/site/contact-ajax', contact)
                 .success(function(data, status, headers, config) {
                     console.info(data);
                     if (data.code == 200) {
-                        window.location.href = '/';
+                        $scope.notYetSendEmail = false;
                     } else if (data.code == 400) {
                         for (var i in data.errors) {
                             switch (i) {
-                                case 'username' :
-                                    setErrorsForFormElement('usernameInput');
+                                case 'name' :
+                                case 'email' :
+                                case 'subject' :
+                                    setErrorsForFormElement(i + 'Input');
                                     break;
-                                case 'password' :
-                                    setErrorsForFormElement('passwordInput');
+                                case 'body' :
+                                    setErrorsForFormElement('bodyTextarea');
                                     break;
                             }
                         }

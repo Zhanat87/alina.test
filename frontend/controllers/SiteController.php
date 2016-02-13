@@ -199,6 +199,28 @@ class SiteController extends Controller
         }
     }
 
+    public function actionContactAjax()
+    {
+        if (Yii::$app->request->isPost) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+            $model = new ContactForm();
+            $model->name = $this->getParam('name');
+            $model->email = $this->getParam('email');
+            $model->subject = $this->getParam('subject');
+            $model->body = $this->getParam('body');
+            if ($model->validate()) {
+                if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
+                    return $this->getSuccessResponse();
+                } else {
+                    return $this->getErrorResponse();
+                }
+            } else {
+                return $this->getModelErrorResponse($model->getErrors());
+            }
+        }
+        return $this->getBadRequestResponse();
+    }
+
     /**
      * Displays about page.
      *

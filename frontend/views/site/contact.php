@@ -5,41 +5,45 @@
 /* @var $model \frontend\models\ContactForm */
 
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
-use yii\captcha\Captcha;
+use frontend\assets\ContactAsset;
 
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
+
+ContactAsset::register($this);
 ?>
 <div class="site-contact">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
-    </p>
-
+    <h1>
+        <?= Html::encode($this->title) ?>
+    </h1>
     <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
-
-                <?= $form->field($model, 'name') ?>
-
-                <?= $form->field($model, 'email') ?>
-
-                <?= $form->field($model, 'subject') ?>
-
-                <?= $form->field($model, 'body')->textArea(['rows' => 6]) ?>
-
-                <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                    'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                ]) ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+        <div class="panel col-xs-5" ng-controller="contactCtrl">
+            <form name="contactForm" novalidate ng-submit="sendForm(contact)" ng-show="notYetSendEmail">
+                <div class="well">
+                    <div class="form-group">
+                        <label>name:</label>
+                        <input name="name" type="text" class="form-control nameInput" required ng-model="contact.name" />
+                    </div>
+                    <div class="form-group">
+                        <label>email:</label>
+                        <input name="email" type="email" class="form-control emailInput" required ng-model="contact.email" />
+                    </div>
+                    <div class="form-group">
+                        <label>subject:</label>
+                        <input name="subject" type="text" class="form-control subjectInput" required ng-model="contact.subject" />
+                    </div>
+                    <div class="form-group">
+                        <label>body:</label>
+                        <textarea name="body" class="form-control bodyTextarea" required ng-model="contact.body"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" ng-disabled="contactForm.$invalid">
+                        Submit
+                    </button>
                 </div>
-
-            <?php ActiveForm::end(); ?>
+            </form>
+            <div class="alert alert-success" ng-hide="notYetSendEmail">
+                message send success
+            </div>
         </div>
     </div>
-
 </div>
