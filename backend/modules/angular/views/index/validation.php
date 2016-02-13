@@ -93,7 +93,7 @@ AngularValidationAsset::register($this);
         form .ng-valid.ng-dirty {
             background-color: lightgreen;
         }
-        /*первые два стиля применяются к элементам в которые пользователь внес изменения,
+        /*первые два стиля применяются к элементам, в которые пользователь внес изменения,
         валидация производится angular после каждого действия пользователя (после каждого введенного символа)*/
         span.summary.ng-invalid {
             color: red;
@@ -255,9 +255,6 @@ AngularValidationAsset::register($this);
     <br />
     <hr />
     <br />
-    <p>
-
-    </p>
     <div id="todoPanel" class="panel col-xs-3" ng-controller="validation5Ctrl">
         <form name="myForm" novalidate ng-submit="addNewUser(newUser)">
             <div class="well">
@@ -301,7 +298,6 @@ AngularValidationAsset::register($this);
         form.validate .ng-invalid-required.ng-dirty {
             background-color: lightpink;
         }
-
         form.validate .ng-invalid-email.ng-dirty {
             background-color: lightgoldenrodyellow;
         }

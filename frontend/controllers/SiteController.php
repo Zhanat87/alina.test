@@ -25,6 +25,7 @@ use yii\widgets\ActiveForm;
  */
 class SiteController extends Controller
 {
+
     /**
      * @inheritdoc
      */
@@ -141,15 +142,26 @@ class SiteController extends Controller
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
+        return $this->render('login', [
+            'model' => new LoginForm(),
+        ]);
+    }
 
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        } else {
-            return $this->render('login', [
-                'model' => $model,
-            ]);
+    public function actionLoginAjax()
+    {
+        if (Yii::$app->request->isPost) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+            $loginForm = new LoginForm();
+            $loginForm->username = $this->getParam('username');
+            $loginForm->password = $this->getParam('password');
+            $loginForm->rememberMe = $this->getParam('rememberMe');
+            if ($loginForm->login()) {
+                return $this->getSuccessResponse();
+            } else {
+                return $this->getModelErrorResponse($loginForm->getErrors());
+            }
         }
+        return $this->getBadRequestResponse();
     }
 
     /**

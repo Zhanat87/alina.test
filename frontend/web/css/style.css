@@ -1,0 +1,51 @@
+/*изначально когда страница только загрузилась к элементам не применяется никакой стиль
+так как они относятся к классу ng-pristine для которого стили не заданы*/
+form .ng-invalid.ng-dirty {
+    background-color: lightpink;
+}
+form .ng-valid.ng-dirty {
+    background-color: lightgreen;
+}
+/*первые два стиля применяются к элементам, в которые пользователь внес изменения,
+валидация производится angular после каждого действия пользователя (после каждого введенного символа)*/
+span.summary.ng-invalid {
+    color: red;
+    font-weight: bold;
+}
+span.summary.ng-valid {
+    color: green;
+}
+/*эти два стиля применяются к блоку summary в зависимости от того валидны ли данные в форме или нет*/
+
+/*angular так же позволяет применять стили в зависимости от того какое ограничение на валидность срабатывает
+ниже приведено 2 стиля: 1й срабатывает если мы сделали поле dirty 2й когда email не прошел валидность*/
+form .ng-invalid-required.ng-dirty {
+    background-color: lightpink;
+}
+form .ng-invalid-email.ng-dirty {
+    background-color: lightgoldenrodyellow;
+}
+
+/*angular так же позволяет применять стили в зависимости от того какое ограничение на валидность срабатывает
+ниже приведено 2 стиля: 1й срабатывает если мы сделали поле dirty 2й когда email не прошел валидность*/
+form .ng-invalid-required.ng-dirty {
+    background-color: lightpink;
+}
+form .ng-invalid-email.ng-dirty {
+    background-color: lightgoldenrodyellow;
+}
+
+form.validate .ng-invalid-required.ng-dirty {
+    background-color: lightpink;
+}
+form.validate .ng-invalid-email.ng-dirty {
+    background-color: lightgoldenrodyellow;
+}
+/**/
+.ngInvalid {
+    color: red;
+    font-weight: bold;
+}
+.ngDirty {
+    background-color: lightpink;
+}

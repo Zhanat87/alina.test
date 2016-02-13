@@ -35,7 +35,7 @@ class Controller extends YiiController
      */
     private function setParams()
     {
-        if (Yii::$app->request->isAjax && in_array(Yii::$app->request->method, ['POST', 'PUT', 'DELETE'])) {
+        if (Yii::$app->request->isAjax || in_array(Yii::$app->request->method, ['POST', 'PUT', 'DELETE'])) {
             if (strpos(Yii::$app->request->headers['content-type'], 'application/json') !== false) {
                 $inputJSON = file_get_contents('php://input');
                 if ($inputJSON) {
@@ -136,6 +136,22 @@ class Controller extends YiiController
     {
         return $e ? ArrayHelper::merge(['code' => $e->getCode(), 'message' => $e->getMessage()],
             Yii::$app->params['response']['error']) : Yii::$app->params['response']['error'];
+    }
+
+    public function getBadRequestResponse()
+    {
+        return [
+            'code' => 405,
+            'msg' => 'bad ajax request!',
+        ];
+    }
+
+    public function getModelErrorResponse($errors)
+    {
+        return [
+            'code' => 400,
+            'errors' => $errors,
+        ];
     }
 
 }
