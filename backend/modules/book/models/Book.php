@@ -4,7 +4,7 @@ namespace backend\modules\book\models;
 
 use Yii;
 use common\my\yii2\ActiveRecord;
-use backend\my\behaviors\ImageBehavior;
+use yiidreamteam\upload\ImageUploadBehavior;
 
 /**
  * This is the model class for table "book".
@@ -80,7 +80,7 @@ class Book extends ActiveRecord
     {
         return [
             [
-                'class' => ImageBehavior::className(),
+                'class' => ImageUploadBehavior::className(),
                 'attribute' => 'image',
                 'thumbs' => [
                     'thumb' => ['width' => 50, 'height' => 50],

@@ -24,11 +24,10 @@ class m151201_134203_create_table_book extends Migration
                 $rows[] = [
                     mt_rand(1, 10),
                     $faker->name,
-                    'image',
                     $faker->date(),
                 ];
             }
-            $this->batchInsert('{{%book}}', ['author_id', 'name', 'image', 'publish_date'], $rows);
+            $this->batchInsert('{{%book}}', ['author_id', 'name', 'publish_date'], $rows);
         }
         echo "create table book: success up\n";
     }
