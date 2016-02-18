@@ -173,7 +173,7 @@ function headerMenu()
 }
 function tooltipPopover()
 {
-    $('.grid-view a').each(function() {
+    $('.grid-view a.table-link').each(function() {
         $(this).attr('data-toggle', 'tooltip');
     });
     $("[data-toggle='tooltip']").tooltip();

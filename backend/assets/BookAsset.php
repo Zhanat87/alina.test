@@ -12,11 +12,12 @@ class BookAsset extends AssetBundle
 {
 
     public $css = [
+        'myfiles/css/lightbox.css',
         'myfiles/css/book.css',
     ];
 
     public $js = [
-        'myfiles/js/jquery.elevateZoom-3.0.8.min.js',
+        'myfiles/js/lightbox.js',
         'myfiles/js/book.js',
     ];
 

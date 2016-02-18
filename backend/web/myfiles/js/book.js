@@ -1,11 +1,12 @@
 $(document).ready(function() {
-    zoomImage();
+    lightBoxImage();
     removeImage();
 });
-function zoomImage()
+function lightBoxImage()
 {
-    // http://www.elevateweb.co.uk/image-zoom/examples
-    $('.zoomImage').elevateZoom({tint:true, tintColour:'#F90', tintOpacity:0.5});
+    $('.lightBoxImage').each(function() {
+        $(this).attr('data-lightbox', 'image' + $(this).parent().parent().attr('data-key'));
+    });
 }
 function removeImage()
 {

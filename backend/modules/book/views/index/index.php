@@ -67,10 +67,11 @@ BookAsset::register($this);
                                 'format' => 'html',
                                 'value' => function ($searchModel) {
                                     /** @var backend\modules\book\models\search\BookSearch $searchModel */
-                                    return Html::img($searchModel->getThumbFileUrl('image', 'thumb'),
+                                    return Html::a(Html::img($searchModel->getThumbFileUrl('image', 'thumb')),
+                                        $searchModel->getImageFileUrl('image'),
                                         [
-                                            'data-zoom-image' => $searchModel->getImageFileUrl('image'),
-                                            'class' => 'zoomImage',
+                                            'title' => $searchModel->name,
+                                            'class' => 'lightBoxImage',
                                         ]);
                                 },
                             ],
