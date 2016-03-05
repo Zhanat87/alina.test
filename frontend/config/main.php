@@ -11,6 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
+    'modules' => [
+        'angular' => [
+            'class' => 'frontend\modules\angular\Angular',
+        ],
+    ],
     'components' => [
         'user'         => [
             'identityClass'   => 'backend\modules\user\models\User',
