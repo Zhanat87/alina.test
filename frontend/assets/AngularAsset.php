@@ -23,6 +23,7 @@ class AngularAsset extends AssetBundle
     ];
 
     public $jsOptions = [
+        // load angular as soon as possible (asap)
         'position' => View::POS_HEAD,
     ];
 

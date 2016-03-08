@@ -16,7 +16,7 @@ class AppAsset extends AssetBundle
     ];
 
     public $js = [
-        'js/angular-1.5.0.js',
+//        'js/angular-1.5.0.js',
 //        'js/angular_resource.js',
 //        'js/angular_route.js',
 //        'js/angular_sanitize.js',
@@ -26,6 +26,7 @@ class AppAsset extends AssetBundle
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapPluginAsset',
+        'frontend\assets\AngularAsset',
     ];
 
 }

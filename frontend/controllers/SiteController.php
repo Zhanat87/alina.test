@@ -73,12 +73,18 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionIndex()
+    {
+        // render the layout without a view
+        return $this->renderContent(null);
+    }
+
     /**
      * Displays homepage.
      *
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex2()
     {
         $searchModel = new NewsSearch;
         $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
@@ -300,4 +306,5 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
 }
