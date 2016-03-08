@@ -22,7 +22,11 @@
         "yiisoft/yii2-imagine": "~2.0.0",
         "yii-dream-team/yii2-upload-behavior": "*",
         "symfony/var-dumper": "^3.0",
-        "yiisoft/yii2-mongodb": "~2.0.0"
+        "yiisoft/yii2-mongodb": "~2.0.0",
+        "bower-asset/angular": "*",
+        "bower-asset/angular-route": "*",
+        "bower-asset/angular-strap": "*",
+        "bower-asset/angular-resource": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
