@@ -77,7 +77,7 @@ class AjaxCrudController extends Controller
      * @return ActiveRecord the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function findModel($id)
+    protected function findModel($id)
     {
         /** @var ActiveRecord $class */
         $class = $this->modelClass;
