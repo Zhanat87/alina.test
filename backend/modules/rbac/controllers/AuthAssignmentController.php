@@ -12,9 +12,9 @@ use yii\web\NotFoundHttpException;
 use yii\widgets\ActiveForm;
 
 /**
- * AuthAssignmentControllerAjax implements the CRUD actions for AuthAssignment model.
+ * AuthAssignmentController implements the CRUD actions for AuthAssignment model.
  */
-class AuthAssignmentControllerAjax extends AjaxCrudController
+class AuthAssignmentController extends AjaxCrudController
 {
 
     /**
